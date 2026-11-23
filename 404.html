@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page not found · The Director’s Notebook</title><meta name="robots" content="noindex">
+<meta name="theme-color" content="#000000"><link rel="icon" href="/icons/dn-32.png">
+<style>
+@font-face{font-family:Inter;font-style:normal;font-weight:100 900;font-display:swap;src:url(/fonts/inter-latin-wght-normal.woff2) format("woff2")}
+:root{--ink:#1c1c1e;--mut:#6a6a70;--line:#dcd9d1;--accent:#2f6fde;--cream:#fcf7e9;--tint:#f6f3ea;--bg:#fbfaf7}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:64px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}img{display:block;max-width:100%;height:auto}
+h1,h2,h3{font-weight:800;letter-spacing:-.03em;margin:0;text-wrap:balance}p{margin:0}
+.w{max-width:1120px;margin:0 auto;padding:0 28px}
+.bar{position:sticky;top:0;z-index:10;background:rgba(0,0,0,.92);backdrop-filter:blur(10px);color:var(--cream)}
+.bar .w{display:flex;align-items:center;gap:6px;height:56px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:-.01em;text-decoration:none;margin-right:auto}
+.brand img{width:28px;height:28px;border-radius:6px}
+.bar a.l{text-decoration:none;font-size:14.5px;font-weight:600;padding:8px 12px;border-radius:8px}.bar a.l:hover{background:rgba(252,247,233,.12)}
+.btn{display:inline-block;text-decoration:none;font-weight:700;font-size:15.5px;padding:12px 20px;border-radius:10px;background:var(--cream);color:#000;border:1px solid var(--cream)}
+.btn:hover{background:#fff}.btn.o{background:transparent;color:var(--cream);border-color:rgba(252,247,233,.45)}.btn.o:hover{background:rgba(252,247,233,.1)}
+.btn.s{padding:8px 14px;font-size:14.5px}.btn.d{background:var(--ink);color:#fff;border-color:var(--ink)}.btn.d:hover{background:#000}.btn.od{background:transparent;color:var(--ink);border-color:#bdb9ae}.btn.od:hover{background:#fff}
+.hero{background:#000;color:var(--cream);text-align:center;padding:76px 0 0}
+.hero .logo{width:112px;height:112px;margin:0 auto}
+.hero h1{color:#fff;font-size:clamp(40px,6.4vw,76px);line-height:1.02;margin-top:30px}
+.hero .sub{font-size:clamp(18px,2.1vw,23px);line-height:1.45;max-width:720px;margin:20px auto 0;color:rgba(252,247,233,.86);text-wrap:balance}
+.hero .cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:32px}
+.hero .fine{font-size:13.5px;letter-spacing:.04em;color:rgba(252,247,233,.55);margin-top:18px}
+.shot{margin:56px auto -150px;max-width:1040px;border-radius:14px;overflow:hidden;border:1px solid rgba(252,247,233,.18);box-shadow:0 40px 90px rgba(0,0,0,.5);background:#fff;position:relative;z-index:1}
+.after-hero{padding-top:210px}
+section{padding:96px 0}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--accent)}
+.h2{font-size:clamp(30px,4.2vw,46px);line-height:1.08;margin-top:12px;max-width:760px}
+.lede{font-size:19.5px;color:#3a3a3e;max-width:640px;margin-top:16px;line-height:1.5}
+.tabs{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:48px}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.05)}
+.card .t{padding:20px 22px 22px}.card .n{font-size:12px;font-weight:800;color:var(--accent);letter-spacing:.14em}
+.card h3{font-size:23px;margin-top:4px}.card p{color:#4a4a4f;margin-top:6px;font-size:16px}
+.card img{border-bottom:1px solid var(--line)}
+.dark{background:#000;color:var(--cream)}.dark .h2{color:#fff}.dark .lede{color:rgba(252,247,233,.8)}.dark .eyebrow{color:var(--cream);opacity:.6}
+.mode{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,8fr);gap:44px;align-items:center;padding:44px 0;border-top:1px solid rgba(252,247,233,.18)}
+.mode:first-of-type{margin-top:48px}
+.mode h3{font-size:34px;color:#fff}.mode p{color:rgba(252,247,233,.82);margin-top:10px;font-size:17.5px}
+.mode .k{font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;opacity:.55}
+.mode .fr{border-radius:12px;overflow:hidden;border:1px solid rgba(252,247,233,.18);background:#fff}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
+.tile h3{font-size:19px;letter-spacing:-.015em;margin-top:14px}.tile p{color:#4a4a4f;font-size:15.5px;margin-top:4px;line-height:1.5}
+.tile .fr{border-radius:12px;overflow:hidden;border:1px solid var(--line);background:#fff;aspect-ratio:3/2;box-shadow:0 8px 24px rgba(0,0,0,.05)}
+.tile .fr img{width:100%;height:100%;object-fit:cover;object-position:center}
+.get{background:var(--tint);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:44px}
+.how{background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px 28px}
+.how h3{font-size:22px}.how ol{list-style:none;counter-reset:s;padding:0;margin:14px 0 0}
+.how li{counter-increment:s;position:relative;padding-left:40px;margin-top:12px;min-height:28px}
+.how li::before{content:counter(s);position:absolute;left:0;top:0;width:28px;height:28px;border-radius:50%;background:var(--accent);color:#fff;font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center}
+.notes{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:28px}
+.note b{display:block;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut);margin-bottom:4px}
+.note{font-size:16px;color:#3a3a3e}
+.guide .in{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:48px;align-items:center}
+.guide .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.book{text-decoration:none;background:#000;border-radius:14px;aspect-ratio:8.5/11;max-width:330px;margin-left:auto;display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--cream);text-align:center;padding:28px;box-shadow:0 30px 70px rgba(0,0,0,.28)}
+.book img{width:46%}.book b{color:#fff;font-size:19px;letter-spacing:-.02em;margin-top:18px;display:block}.book span{font-size:10.5px;letter-spacing:.4em;text-transform:uppercase;font-weight:600;margin-top:8px}
+footer{padding:36px 0 56px;color:var(--mut);font-size:14px;border-top:1px solid var(--line)}
+footer .w{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}footer a{color:var(--accent);text-decoration:none;font-weight:600}
+@media (max-width:860px){.tabs,.two,.notes,.guide .in{grid-template-columns:1fr}.tiles{grid-template-columns:1fr 1fr}.mode{grid-template-columns:1fr;gap:20px}.book{margin:0 auto}.shot{margin-bottom:-90px}.after-hero{padding-top:140px}section{padding:72px 0}}
+@media (max-width:560px){.tiles{grid-template-columns:1fr}.bar a.l{display:none}.w{padding:0 20px}body{font-size:16.5px}}
+
+html,body{height:100%}body{background:#000}.nf{min-height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:var(--cream);padding:40px 24px}
+.nf img{width:88px;height:88px}.nf h1{color:#fff;font-size:clamp(30px,5vw,46px);margin-top:26px}.nf p{margin-top:12px;color:rgba(252,247,233,.8)}.nf .cta{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:28px}</style></head>
+<body><main class="nf"><img src="/img/logo.png" width="512" height="512" alt="">
+<h1>There is no page here.</h1><p>The address may have been mistyped.</p>
+<div class="cta"><a class="btn" href="/">The front page</a><a class="btn o" href="https://app.thedirectorsnotebook.com/">Open the app</a></div></main></body></html>
