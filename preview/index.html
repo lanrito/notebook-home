@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Director’s Notebook</title>
+<meta name="description" content="A scene’s breakdown, strategy, floor plan and shot list in one place. An app for directors, for the Mac and the iPad."><meta name="robots" content="noindex">
+<meta name="theme-color" content="#000000"><link rel="icon" href="/icons/dn-32.png"><link rel="apple-touch-icon" href="/icons/dn-touch.png"><link rel="canonical" href="https://thedirectorsnotebook.com/">
+<meta property="og:type" content="website"><meta property="og:site_name" content="The Director’s Notebook"><meta property="og:title" content="The Director’s Notebook"><meta property="og:description" content="A scene’s breakdown, strategy, floor plan and shot list in one place. An app for directors, for the Mac and the iPad."><meta property="og:url" content="https://thedirectorsnotebook.com/"><meta property="og:image" content="https://thedirectorsnotebook.com/img/card.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image">
+<style>
+@font-face{font-family:Inter;font-style:normal;font-weight:100 900;font-display:swap;src:url(/fonts/inter-latin-wght-normal.woff2) format("woff2")}
+:root{--ink:#1c1c1e;--cream:#fcf7e9;--paper:#fbfaf7;--line:#d6d2c6;--dk:rgba(252,247,233,.66);--rule:rgba(252,247,233,.3)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:24px}
+body{margin:0;background:#000;color:var(--ink);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit}a:hover{opacity:.78}img,video{display:block;max-width:100%;height:auto}
+h1,h2,h3,p,figure{margin:0}h1,h2,h3{font-weight:800}
+.w{max-width:1320px;margin:0 auto;padding-inline:clamp(20px,4vw,48px)}
+.dark{background:#000;color:var(--cream)}.light{background:var(--paper);color:var(--ink)}
+.band{padding:110px 0}
+.caps{font-size:11.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase}.dark .caps{color:var(--dk)}.light .caps{color:#5c5c62}
+.top{display:flex;flex-wrap:wrap;align-items:center;gap:8px 26px;padding:18px 0}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:700;margin-right:auto}.brand img{width:30px;height:30px}
+.top a.l{text-decoration:none;font-size:14.5px;font-weight:600;padding:12px 0}
+.btn{display:inline-block;text-decoration:none;font-weight:700;font-size:16px;padding:14px 22px;border-radius:10px;background:var(--cream);color:#000;border:1.5px solid var(--cream)}
+.btn.s{font-size:14.5px;padding:10.5px 16px}.btn.o{background:transparent;color:var(--cream);border-color:rgba(252,247,233,.5)}.btn.k{background:var(--ink);color:var(--cream);border-color:var(--ink)}
+.hero{padding-bottom:92px}
+.head{display:flex;flex-wrap:wrap;align-items:flex-end;gap:32px 56px;padding:84px 0 56px}
+.head h1{flex:999 1 600px;min-width:0;font-size:clamp(54px,10.6vw,152px);line-height:.9;letter-spacing:-.055em;color:#fff}
+.head .side{flex:1 1 340px;min-width:0;padding-bottom:10px}
+.head .sub{font-size:21px;line-height:1.4;color:rgba(252,247,233,.9)}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.fine{margin-top:16px;font-size:13px;letter-spacing:.04em;color:var(--dk)}.fine a{text-decoration:none;border-bottom:1px solid rgba(252,247,233,.3)}
+.caprow{display:flex;justify-content:space-between;gap:16px;padding-bottom:12px}
+.film{position:relative;border-radius:10px;overflow:hidden;border:1px solid rgba(252,247,233,.22);background:#fff}.film video{width:100%}
+.ctl{display:flex;align-items:center;gap:18px;margin-top:6px}
+.vp{font:700 11.5px/1 Inter,system-ui,sans-serif;letter-spacing:.22em;text-transform:uppercase;min-height:44px;min-width:64px;padding:0;border:0;background:none;color:var(--cream);cursor:pointer;text-align:right}
+.ctl .vp+.vp{min-width:0}
+.prog{flex:1;height:3px;background:rgba(252,247,233,.2);border-radius:2px;overflow:hidden}.prog i{display:block;height:3px;width:0;background:var(--cream)}
+.cols{display:flex;flex-wrap:wrap;gap:44px 40px;margin-top:28px}
+.col{flex:1 1 300px;min-width:0;border-top:1.5px solid var(--ink);padding-top:22px}
+.col h2{font-size:clamp(48px,6vw,84px);line-height:.95;letter-spacing:-.045em}
+.col p{margin:16px 0 22px;color:#3a3a3e;min-height:80px}.col img{border-radius:8px;border:1px solid var(--line);width:100%}
+.zb{display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in;font:inherit;color:inherit;text-align:left;border-radius:8px}
+.zt{display:block;margin:2px 0 0 auto;min-height:40px;padding:0;border:0;background:none;cursor:zoom-in;font:700 11.5px/1 Inter,system-ui,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#5c5c62}
+.zt:hover,.zb:hover+.zt{color:var(--ink)}
+.sample{display:flex;flex-wrap:wrap;gap:40px 64px;align-items:flex-start;margin-top:72px;padding-top:40px;border-top:1.5px solid var(--ink)}
+.sample .sa{flex:1 1 320px;min-width:0}.sample h3{margin-top:12px;font-size:clamp(30px,3.6vw,46px);line-height:1.02;letter-spacing:-.035em}
+.sample .sa p{margin-top:16px;color:#3a3a3e;max-width:460px}.sample .sd{margin-top:26px}.sample .sm{margin-top:14px;font-size:13px;letter-spacing:.04em;color:#5c5c62}
+.sample .sp{flex:2 1 520px;min-width:0;display:grid;grid-template-columns:1fr 1fr;gap:22px 20px}
+.pg img{width:100%;border-radius:6px;border:1px solid var(--line);background:#fff;box-shadow:0 10px 28px rgba(0,0,0,.07)}.pg .caps{display:block;margin-top:10px;color:#5c5c62}
+.zoom{width:min(1500px,96vw);max-width:none;max-height:94vh;padding:12px 14px 14px;border:1px solid rgba(252,247,233,.24);border-radius:12px;background:#000;color:var(--cream)}
+.zoom::backdrop{background:rgba(0,0,0,.82)}
+.zoom .zh{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:0 2px 8px}.zoom b{font-size:18px;letter-spacing:-.02em;color:#fff}
+.zoom .zc{min-height:40px;padding:0 2px;border:0;background:none;cursor:pointer;font:700 11.5px/1 Inter,system-ui,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:var(--cream)}
+.zoom img{width:100%;max-height:calc(94vh - 84px);object-fit:contain;border-radius:6px;background:#fff}
+.big{margin-top:12px;font-size:clamp(40px,6.4vw,92px);line-height:.95;letter-spacing:-.045em;color:#fff}
+.lede{margin-top:18px;font-size:21px;line-height:1.4;color:rgba(252,247,233,.9);max-width:620px}
+.pair{display:flex;flex-wrap:wrap;gap:28px 24px;margin-top:44px}.pair figure{flex:1 1 440px;min-width:0}
+.pair img{border-radius:10px;width:100%}.pair .n img{border:1px solid rgba(252,247,233,.22)}
+.pair figcaption{margin-top:16px;border-top:1px solid var(--rule);padding-top:14px;color:rgba(252,247,233,.84)}.pair figcaption b{display:block;font-size:22px;letter-spacing:-.02em;color:#fff}
+.h2{margin-top:12px;font-size:clamp(32px,4.4vw,56px);line-height:1.02;letter-spacing:-.035em;max-width:860px}
+.tbl{overflow-x:auto;margin-top:36px;border-radius:10px;border:1px solid var(--line);background:#fff}
+table{width:100%;min-width:640px;border-collapse:collapse;font-size:16px;text-align:left}
+thead tr{background:var(--ink);color:#fff;font-size:12.5px;letter-spacing:.06em}th,td{padding:15px 18px;vertical-align:top}th{padding-block:12px}
+tbody tr{border-top:1px solid #e4e0d5}td:first-child{font-weight:800;white-space:nowrap}td:nth-child(2){font-weight:700}td:nth-child(3){color:#3a3a3e}
+.chip{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:9px}
+.after{margin-top:22px;font-size:15.5px;color:#4a4a4f}.after a{font-weight:700}
+.maker{padding:124px 0}.maker .in{display:flex;flex-wrap:wrap;gap:44px 72px;align-items:flex-start}
+.maker .a{flex:1 1 380px;min-width:0}.maker .b{flex:999 1 480px;min-width:0}
+.maker h2{margin-top:14px;font-size:clamp(38px,5.4vw,76px);line-height:.96;letter-spacing:-.045em;color:#fff}
+.bio{margin-top:44px;border-top:1px solid var(--rule);padding-top:20px}.bio b{display:block;font-weight:800;font-size:19px;color:#fff}
+.bio p{margin-top:10px;font-size:15.5px;line-height:1.6;color:rgba(252,247,233,.82)}
+.note{font-size:22px;line-height:1.5;color:rgba(252,247,233,.94)}.note.k{margin-top:22px;color:#fff;font-weight:600}
+.old{margin-top:36px;padding-top:28px;border-top:1px solid var(--rule);font-size:18px;line-height:1.6;color:rgba(252,247,233,.86)}
+.links{margin-top:22px;font-size:15.5px}.links a{font-weight:700;color:#fff}.links span{color:var(--dk)}
+.get{display:flex;flex-wrap:wrap;gap:40px 56px;align-items:flex-start}
+.get .a{flex:1 1 360px;min-width:0}.get h2{margin-top:12px;font-size:clamp(34px,4.6vw,58px);line-height:1;letter-spacing:-.04em}
+.how{flex:1 1 260px;min-width:0;border-top:1.5px solid var(--ink);padding-top:18px}.how h3{font-size:20px}
+.how ol{margin:12px 0 0;padding-left:22px;color:#3a3a3e}
+.notes{display:flex;flex-wrap:wrap;gap:24px 56px;margin-top:56px;padding-top:26px;border-top:1px solid var(--line)}
+.notes p{flex:1 1 320px;min-width:0;font-size:16px;color:#3a3a3e}.notes b{display:block;margin-bottom:4px}.notes a{font-weight:700}
+.contact{padding:110px 0 96px}.contact .in{display:flex;flex-wrap:wrap;gap:44px 72px;align-items:flex-start}
+.contact .a{flex:1 1 400px;min-width:0}.contact .b{flex:1 1 420px;min-width:0}
+.contact h2{margin-top:12px;font-size:clamp(34px,4.6vw,58px);line-height:1;letter-spacing:-.04em;color:#fff}
+.contact .write{margin-top:22px;font-size:21px;line-height:1.4;color:rgba(252,247,233,.9)}.contact .write a{color:#fff;font-weight:700}
+.route{display:block;text-decoration:none;border-top:1px solid var(--rule);padding:18px 0}.route:last-child{border-bottom:1px solid var(--rule)}
+.route b{display:block;font-size:20px;letter-spacing:-.02em;color:#fff}.route span{display:block;margin-top:2px;color:rgba(252,247,233,.8);font-size:16px}
+footer{border-top:1px solid rgba(252,247,233,.18);padding:26px 0 44px;color:rgba(252,247,233,.72);font-size:14px}footer .w{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px 24px}
+footer a{font-weight:700;color:#fff;text-decoration:none}
+:focus-visible{outline:2px solid #8fb2ff;outline-offset:3px}
+@media (max-width:700px){.tbl{overflow:visible}table{min-width:0}thead{display:none}tbody tr{display:grid;grid-template-columns:62px 1fr;padding:14px 16px}tbody tr:first-child{border-top:0}td{padding:0}td:nth-child(3){grid-column:2;margin-top:3px;font-size:15.5px}
+.band,.hero{padding-bottom:76px}.band{padding-top:76px}.maker{padding:84px 0}.head{padding:56px 0 44px}.col p{min-height:0}.sample{margin-top:52px;padding-top:30px}.sample .sp{gap:16px 12px}body{font-size:16.5px}.note{font-size:19.5px}}@media (max-width:980px){.top a.l.opt{display:none}.top{gap:8px 18px}}
+@media (max-width:700px){.top a.l{display:none}}
+@media (max-width:420px){.brand{font-size:14.5px;gap:7px}.brand img{width:24px;height:24px}.btn.s{padding:9px 11px;font-size:13.5px}.top{gap:8px 8px}}
+</style></head><body>
+
+<header class="dark hero" id="top"><div class="w">
+<nav class="top" aria-label="Main"><a class="brand" href="#top"><img src="/img/logo.png" width="512" height="512" alt="">The Director’s Notebook</a><a class="l opt" href="#modes">Prep · Scout · Set</a><a class="l" href="#maker">Who made it</a><a class="l" href="/preview/guide/">The Guide</a><a class="l" href="#contact">Contact</a><a class="btn s" href="https://app.thedirectorsnotebook.com/">Open the app</a></nav>
+<div class="head">
+<h1>The Director’s<br>Notebook</h1>
+<div class="side"><p class="sub">A scene’s breakdown, strategy, floor plan and shot list in one place.</p>
+<div class="cta"><a class="btn" href="https://app.thedirectorsnotebook.com/">Open the app</a><a class="btn o" href="/preview/guide/">Read the guide</a></div>
+<p class="fine">Free · In beta · No sign-in needed to start</p>
+<p class="fine" style="margin-top:6px">For the Mac and the iPad</p>
+<p class="fine" style="margin-top:6px"><a href="/preview/guide/#c12-what-s-new">Updated November 2026 · What’s new</a></p></div>
+</div>
+<div class="caprow caps"><span>The app in motion</span><span>45 seconds · Silent</span></div>
+<div class="film"><video id="film" autoplay muted loop playsinline preload="metadata" poster="/media/film-poster.jpg" width="1920" height="1080" aria-label="A short silent film of the app: a character’s walk is drawn on the floor plan, a camera is added, the scene plays, and the shot list shows the shots."><source src="/media/film.mp4" type="video/mp4"></video></div>
+<div class="ctl"><div class="prog" aria-hidden="true"><i id="bar"></i></div><button class="vp" id="pp" type="button">Pause</button><button class="vp" id="fs" type="button" hidden>Fullscreen</button></div>
+</div></header>
+
+<section class="light band" id="modes"><div class="w">
+<div class="caps">From the first read to the day you shoot</div>
+<div class="cols"><div class="col"><h2>Prep.</h2><p>Build the set, block the scene and place the cameras. Every camera on the plan is a shot on the list.</p><button class="zb" type="button" data-zoom="/img/main.jpg" data-t="Prep." aria-label="Enlarge the Prep picture"><img src="/img/main.jpg" width="1800" height="1133" alt="Prep: a studio set from above, with two characters, their moves and a camera traveling beside one of them." loading="lazy"></button><button class="zt" type="button" data-zoom="/img/main.jpg" data-t="Prep." aria-hidden="true" tabindex="-1">Enlarge</button></div><div class="col"><h2>Scout.</h2><p>For a location before it has scenes. Sketch the space, pin photos where you took them and place camera ideas.</p><button class="zb" type="button" data-zoom="/img/scout.jpg" data-t="Scout." aria-label="Enlarge the Scout picture"><img src="/img/scout.jpg" width="1500" height="944" alt="Scout: a kitchen sketched from above with a photo pin and a camera idea, and the scout’s notes beside it." loading="lazy"></button><button class="zt" type="button" data-zoom="/img/scout.jpg" data-t="Scout." aria-hidden="true" tabindex="-1">Enlarge</button></div><div class="col"><h2>Set.</h2><p>The plan becomes something to shoot from. Nothing on it can be moved by accident.</p><button class="zb" type="button" data-zoom="/img/set.jpg" data-t="Set." aria-label="Enlarge the Set picture"><img src="/img/set.jpg" width="1500" height="944" alt="Set: the plan beside a panel showing the current shot, its status and the list of shots." loading="lazy"></button><button class="zt" type="button" data-zoom="/img/set.jpg" data-t="Set." aria-hidden="true" tabindex="-1">Enlarge</button></div></div>
+</div></section>
+
+<section class="dark band" id="light"><div class="w">
+<div class="caps">Light and time of day</div>
+<h2 class="big">Day. Night.</h2>
+<p class="lede">The same lot, the same blocking. See where the sun will be, then turn the lights on.</p>
+<div class="pair">
+<figure><img src="/img/sun.jpg" width="1400" height="987" alt="A parking lot by day with the sun’s path, long shadows and a Side-lit tag by the camera." loading="lazy"><figcaption><b>Sun &amp; Shadows</b>Where the sun will be at a place, date and time, and how each camera is lit.</figcaption></figure>
+<figure class="n"><img src="/img/night.jpg" width="1400" height="987" alt="The same lot at night, lit by two street lamps and one film light." loading="lazy"><figcaption><b>Night Look</b>The plan goes dark and stays lit only where its lights throw.</figcaption></figure>
+</div>
+</div></section>
+
+<section class="light band" id="plan"><div class="w">
+<div class="caps">On the plan</div>
+<h2 class="h2">What it does, written the way the app writes a shot list.</h2>
+<div class="tbl"><table><thead><tr><th style="width:110px">Shot #</th><th style="width:270px">Feature</th><th>What it does</th></tr></thead><tbody>
+<tr><td><span class="chip" style="background:#2E9E5B" aria-hidden="true"></span>1A</td><td>Import a script</td><td>A folder with a scene for every scene in the PDF, and a character for everyone who speaks.</td></tr><tr><td><span class="chip" style="background:#2E9E5B" aria-hidden="true"></span>1B</td><td>Set from a Director’s Plan</td><td>Reads an art department plan into walls, doors and furniture you can move.</td></tr><tr><td><span class="chip" style="background:#2E9E5B" aria-hidden="true"></span>1C</td><td>Overhead from an Address</td><td>Draws the block around a real address, to scale, with north marked.</td></tr><tr><td><span class="chip" style="background:#3E63DD" aria-hidden="true"></span>2A</td><td>235 props and set pieces</td><td>Placed at true size. Keep your own as My Props.</td></tr><tr><td><span class="chip" style="background:#D97B2B" aria-hidden="true"></span>3A</td><td>Draw the Walk</td><td>Draw where a character goes and the line becomes the move.</td></tr><tr><td><span class="chip" style="background:#D97B2B" aria-hidden="true"></span>3B</td><td>Track With</td><td>A camera that travels with a character, leading, beside or trailing.</td></tr><tr><td><span class="chip" style="background:#8E5BD0" aria-hidden="true"></span>4A</td><td>Lenses on the plan</td><td>See how wide each lens sees from where the camera stands.</td></tr><tr><td><span class="chip" style="background:#8E5BD0" aria-hidden="true"></span>4B</td><td>Storyboard frames</td><td>Attach a picture to any shot.</td></tr><tr><td><span class="chip" style="background:#C2415B" aria-hidden="true"></span>5A</td><td>Suggest Shooting Order</td><td>Groups setups by which way the cameras look, so one direction is finished before you turn around.</td></tr><tr><td><span class="chip" style="background:#C2415B" aria-hidden="true"></span>5B</td><td>Export PDF</td><td>The breakdown, the floor plan and the shot list, under your production’s letterhead.</td></tr>
+</tbody></table></div>
+<p class="after">Every one of these is explained in <a href="/preview/guide/">The Guide</a>, which is also a <a href="https://app.thedirectorsnotebook.com/guide/The-Directors-Notebook-Guide.pdf">PDF</a>.</p>
+<div class="sample" id="sample">
+<div class="sa"><div class="caps">What comes out</div><h3>A finished scene, on paper.</h3>
+<p>Scene 1 of “The Long Way Home”, the invented project in these pictures, as Export PDF makes it: the breakdown, the shooting strategy, the floor plan and the shot list.</p>
+<p class="sd"><a class="btn k" href="/media/The-Long-Way-Home-Sample.pdf" download>Download the sample</a></p>
+<p class="sm">PDF · 4 pages · 0.7 MB · Nothing retouched</p></div>
+<div class="sp"><button class="zb pg" type="button" data-zoom="/media/sample/breakdown.jpg" data-t="Scene Breakdown" aria-label="Enlarge the Scene Breakdown page"><img src="/media/sample/breakdown-s.jpg" width="880" height="680" alt="The exported Scene Breakdown page: six columns from Synopsis to Pitfalls, filled in for Scene 1." loading="lazy"><span class="caps">Scene Breakdown</span></button><button class="zb pg" type="button" data-zoom="/media/sample/strategy.jpg" data-t="Shooting Strategy" aria-label="Enlarge the Shooting Strategy page"><img src="/media/sample/strategy-s.jpg" width="880" height="680" alt="The exported Shooting Strategy page: power dynamics, camera strategy, key visuals, blocking rationale and the arc of the scene." loading="lazy"><span class="caps">Shooting Strategy</span></button><button class="zb pg" type="button" data-zoom="/media/sample/floor-plan.jpg" data-t="Floor Plan" aria-label="Enlarge the Floor Plan page"><img src="/media/sample/floor-plan-s.jpg" width="880" height="680" alt="The exported Floor Plan page: a studio from above with Maya’s four positions, Dev at the desk and seven cameras, each labeled with its shot." loading="lazy"><span class="caps">Floor Plan</span></button><button class="zb pg" type="button" data-zoom="/media/sample/shot-list.jpg" data-t="Shot List" aria-label="Enlarge the Shot List page"><img src="/media/sample/shot-list-s.jpg" width="880" height="680" alt="The exported Shot List page: seven shots from 1A to 6A with size, type, movement and a description." loading="lazy"><span class="caps">Shot List</span></button></div>
+</div>
+</div></section>
+
+<section class="dark maker" id="maker"><div class="w in">
+<div class="a"><div class="caps">Who made it</div>
+<h2>I built this for my own prep.</h2>
+<div class="bio"><b>Lanre Olabisi</b><p>Lanre Olabisi wrote, directed and produced his first two features, <i>August the First</i> and <i>Somewhere in the Middle</i>. The first earned a Gotham Award nomination and played South by Southwest and Karlovy Vary, and both went on to Netflix. He now directs network television, including <i>The Rookie</i> and <i>The Rookie: Feds</i>, and spent fourteen years teaching directing at the New York Film Academy.</p></div></div>
+<div class="b">
+<p class="note">I direct television and film. Every scene I prep ends up in four places: the breakdown, how I mean to shoot it, the floor plan and the shot list. Change one and the others go stale. I wanted one notebook where a camera on the plan is already a shot on the list. So I made it.</p>
+<p class="note k">It was built during real prep, one episode at a time. Everything in it is there because a scene needed it.</p>
+<p class="old">The idea is an old one. Before he shot <i>The Godfather</i>, Francis Ford Coppola cut up Mario Puzo’s novel, pasted the pages into a binder and wrote his plan for every scene around them. He has said he could have made the film from that binder alone. That is the goal I have whenever I direct something. I want to be able to direct the show from the notebook alone.</p>
+<p class="links"><a href="https://www.youtube.com/watch?v=awce_j2myQw" target="_blank" rel="noopener">Watch Coppola discuss The Godfather Notebook</a> <span>·</span> <a href="https://www.amazon.com/dp/B01MRRWX5J" target="_blank" rel="noopener">Buy Francis Ford Coppola’s Godfather Notebook</a></p>
+</div>
+</div></section>
+
+<section class="light band" id="get"><div class="w">
+<div class="get">
+<div class="a"><div class="caps">Get it</div><h2>It runs in a browser and installs as an app.</h2><p style="margin-top:28px"><a class="btn k" href="https://app.thedirectorsnotebook.com/">Open the app</a></p></div>
+<div class="how"><h3>On the iPad</h3><ol><li>Open <b>app.thedirectorsnotebook.com</b> in Safari.</li><li>Tap Share, then Add to Home Screen.</li><li>Open it from the Home Screen from then on.</li></ol></div>
+<div class="how"><h3>On the Mac</h3><ol><li>Open <b>app.thedirectorsnotebook.com</b> in Chrome.</li><li>Use Chrome’s menu to install the page as an app.</li><li>Keep it in the Dock.</li></ol></div>
+</div>
+<div class="notes">
+<p><b class="caps">Offline</b>Once it has been opened on a device it keeps working without a connection. There is no Save button; work is saved as you go.</p>
+<p><b class="caps">Sync</b>Signing in keeps the same scenes on every device. For now, sync is by invitation: <a href="#contact">write and ask to be added</a>. Without it everything still works and stays on the one device.</p>
+</div>
+</div></section>
+
+<section class="dark contact" id="contact"><div class="w in">
+<div class="a"><div class="caps">Contact</div>
+<h2>A question, or something not working?</h2>
+<p class="write">Write to <a href="mailto:info@thedirectorsnotebook.com">info@thedirectorsnotebook.com</a>.</p></div>
+<div class="b">
+<a class="route" href="mailto:info@thedirectorsnotebook.com?subject=Prop%20request"><b>Request a prop</b><span>A piece a scene needs that is not in the library yet.</span></a>
+<a class="route" href="mailto:info@thedirectorsnotebook.com?subject=Something%20is%20not%20working"><b>Report a problem</b><span>Something that is not working as it should.</span></a>
+<a class="route" href="mailto:info@thedirectorsnotebook.com?subject=An%20idea"><b>Suggest a feature</b><span>An idea from your own prep.</span></a>
+<a class="route" href="mailto:info@thedirectorsnotebook.com?subject=Sync%20access"><b>Ask for sync</b><span>To keep the same scenes on every device.</span></a>
+</div>
+</div></section>
+
+<footer class="dark"><div class="w"><span>The pictures show an invented project, “The Long Way Home”.</span><span><a href="https://app.thedirectorsnotebook.com/">Open the app</a> · <a href="/preview/guide/">The Guide</a> · <a href="mailto:info@thedirectorsnotebook.com">info@thedirectorsnotebook.com</a></span></div></footer>
+<dialog class="zoom" id="zoom" aria-label="Enlarged picture"><div class="zh"><b id="zt"></b><button class="zc" type="button" id="zc">Close</button></div><img id="zi" alt=""></dialog>
+<script>(()=>{
+const v=document.getElementById('film'),b=document.getElementById('pp'),bar=document.getElementById('bar'),fs=document.getElementById('fs');
+if(v&&b){const t=()=>{b.textContent=v.paused?'Play':'Pause';};b.onclick=()=>{v.paused?v.play():v.pause();};v.addEventListener('play',t);v.addEventListener('pause',t);
+ v.addEventListener('timeupdate',()=>{if(v.duration)bar.style.width=(v.currentTime/v.duration*100)+'%';});
+ if(matchMedia('(prefers-reduced-motion: reduce)').matches){v.removeAttribute('autoplay');v.pause();}t();
+ /* Fullscreen: the standard way, Safari's older name for it, then the iPhone's own player */
+ const full=()=>document.fullscreenElement||document.webkitFullscreenElement,can=v.requestFullscreen||v.webkitRequestFullscreen||v.webkitEnterFullscreen;
+ if(fs&&can){fs.hidden=false;const lab=()=>{fs.textContent=full()?'Exit Fullscreen':'Fullscreen';};
+  const out=()=>{(document.exitFullscreen||document.webkitExitFullscreen).call(document);};
+  fs.onclick=()=>{if(full())out();else if(v.requestFullscreen)v.requestFullscreen().catch(()=>{});else if(v.webkitRequestFullscreen)v.webkitRequestFullscreen();else v.webkitEnterFullscreen();};
+  v.addEventListener('click',()=>{if(full())out();});
+  document.addEventListener('fullscreenchange',lab);document.addEventListener('webkitfullscreenchange',lab);}
+}
+/* pictures that enlarge */
+const d=document.getElementById('zoom'),zi=document.getElementById('zi'),zt=document.getElementById('zt');
+if(d&&d.showModal){let from=null;
+ document.querySelectorAll('[data-zoom]').forEach(x=>x.addEventListener('click',()=>{from=x;const im=x.querySelector('img');zi.alt=im?im.alt:'';zi.src=x.dataset.zoom;zt.textContent=x.dataset.t||'';d.showModal();}));
+ document.getElementById('zc').onclick=()=>d.close();
+ d.addEventListener('click',e=>{if(e.target===d)d.close();});
+ d.addEventListener('close',()=>{zi.removeAttribute('src');if(from&&from.focus)from.focus({preventScroll:true});});
+}else document.querySelectorAll('.zt').forEach(x=>x.hidden=true);
+})();</script>
+</body></html>

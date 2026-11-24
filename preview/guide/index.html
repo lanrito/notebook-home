@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Director’s Notebook: The Guide</title>
+<meta name="description" content="A guide to every feature of The Director’s Notebook: what it is for, where it is, the steps with pictures, and what it will not do.">
+<meta name="theme-color" content="#000000"><link rel="icon" href="https://app.thedirectorsnotebook.com/guide/../icons/dn-32.png">
+<style>
+:root{--ink:#1c1c1e;--mut:#6a6a70;--line:#dcd9d1;--paper:#ffffff;--accent:#2f6fde;--cream:#fcf7e9;--tint:#f6f3ea;--black:#000}
+*{box-sizing:border-box}
+body{margin:0;color:var(--ink);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+h1,h2,h3,.op-num{font-family:"Inter Display",Inter,-apple-system,system-ui,sans-serif}
+.cover{background:#000;color:var(--cream);display:flex;flex-direction:column;align-items:center;text-align:center}
+.cover .top{font-weight:600;letter-spacing:.22em;text-transform:uppercase;opacity:.75}
+.cover img{display:block;margin-top:auto}
+.cover h1{color:#fff;font-weight:800;letter-spacing:-.03em;margin:0}
+.cover .g{letter-spacing:.42em;text-transform:uppercase;font-weight:600;margin:0}
+.cover .foot{margin-top:auto;width:100%;display:flex;justify-content:space-between;border-top:1px solid rgba(252,247,233,.55);font-weight:600;letter-spacing:.04em}
+.opener{background:#000;color:var(--cream)}
+.op-top{display:flex;justify-content:space-between;font-weight:600;letter-spacing:.2em;text-transform:uppercase;opacity:.6}
+.op-num{font-weight:800;letter-spacing:-.05em;line-height:.8;color:var(--cream)}
+.chap-title{color:#fff;font-weight:800;letter-spacing:-.03em;margin:0}
+.op-lede{color:rgba(252,247,233,.86);margin:0}
+.op-lab{font-weight:700;letter-spacing:.2em;text-transform:uppercase;opacity:.6}
+.op-list{list-style:none;margin:0;padding:0}
+.op-list li{border-top:1px solid rgba(252,247,233,.22)}
+.op-list a{display:flex;justify-content:space-between;gap:12px;text-decoration:none;color:var(--cream)}
+h3{font-weight:750;letter-spacing:-.015em;margin:0}
+p{margin:0}
+.content p,.content ul,.content ol,.content table,.content figure,.content .where,.content .two,.content .grid4{margin-top:var(--gap)}
+.keep>h3+*{margin-top:.6em}
+ul{padding-left:0;list-style:none;margin-bottom:0}
+ul>li{position:relative;padding-left:1.15em;margin-top:.34em}
+ul>li::before{content:"";position:absolute;left:.18em;top:.62em;width:.34em;height:.34em;border-radius:50%;background:var(--accent)}
+ol.steps{list-style:none;padding:0;margin-bottom:0;counter-reset:st}
+ol.steps>li{counter-increment:st;position:relative;padding-left:2.1em;margin-top:.5em;min-height:1.5em}
+ol.steps>li::before{content:counter(st);position:absolute;left:0;top:.02em;width:1.5em;height:1.5em;border-radius:50%;background:var(--accent);color:#fff;font-weight:700;font-size:.78em;display:flex;align-items:center;justify-content:center}
+.where{background:var(--tint);border-radius:.5em;padding:.55em .8em;line-height:1.4}
+.where>b:first-child{font-size:.72em;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:750;margin-right:.5em}
+.note{background:#fff;border:1px solid var(--line);border-left:3px solid var(--ink);border-radius:0 .5em .5em 0;padding:.65em .9em;margin-top:var(--gap)}
+.note>b:first-child{display:block;font-size:.72em;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);font-weight:750;margin-bottom:.2em}
+figure{margin-left:0;margin-right:0;margin-bottom:0}
+figure .fr{border:1px solid var(--line);border-radius:.55em;overflow:hidden;background:#fff;box-shadow:0 6px 18px rgba(0,0,0,.07)}
+figure img{display:block;width:100%;height:auto}
+figcaption{color:var(--mut);font-size:.82em;margin-top:.5em;line-height:1.4}
+.two{display:grid;gap:1.6em;align-items:start}
+.two figure{margin-top:0!important}
+.two>div>*:first-child{margin-top:0}
+.grid4{display:grid;grid-template-columns:1fr 1fr;gap:1.2em}
+.grid4 figure{margin-top:0}
+table{border-collapse:collapse;width:100%}
+th{text-align:left;font-size:.7em;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);font-weight:700;padding:0 .9em .55em 0;border-bottom:1.5px solid var(--ink)}
+td{vertical-align:top;padding:.55em .9em .55em 0;border-bottom:1px solid var(--line);line-height:1.42}
+td:first-child{font-weight:650;white-space:normal}
+td a{color:var(--accent);text-decoration:none;font-weight:650}
+kbd{font-family:inherit;font-size:.82em;font-weight:650;border:1px solid #c9c6be;border-bottom-width:2px;border-radius:.35em;padding:.05em .42em;background:#fff;white-space:nowrap}
+.content a{color:var(--accent);text-decoration:none}
+.toc{list-style:none;margin:0;padding:0}
+.toc a{display:flex;gap:1em;text-decoration:none;color:inherit}
+.toc .n{font-family:"Inter Display",Inter,sans-serif;font-weight:800;color:var(--accent);letter-spacing:-.02em}
+.toc .tt{flex:1;display:block}
+.toc .t{display:block;font-weight:750;letter-spacing:-.01em}
+.toc .d{display:block;color:var(--mut)}
+ol.key{list-style:none;padding:0;margin-bottom:0;display:grid;grid-template-columns:1fr 1fr;column-gap:2em;margin-top:var(--gap)}
+ol.key li{display:flex;gap:.7em;align-items:baseline;padding:.32em 0;margin:0}
+ol.key li::before{display:none}
+ol.key b{flex:none;width:1.75em;height:1.75em;border-radius:50%;background:var(--accent);color:#fff;font-size:.78em;font-weight:800;line-height:1.75em;text-align:center}
+figure .fr{position:relative}
+.mk{position:absolute;transform:translate(-50%,-50%);width:1.9em;height:1.9em;border-radius:50%;background:var(--accent);color:#fff;font-size:.74em;font-weight:800;line-height:1.9em;text-align:center;box-shadow:0 0 0 2px rgba(255,255,255,.92),0 1px 4px rgba(0,0,0,.3)}
+h4{margin:1.5em 0 0;font-size:.74em;font-weight:750;letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
+h4+*{margin-top:.5em!important}
+
+@font-face{font-family:Inter;font-style:normal;font-weight:100 900;font-display:swap;src:url(https://app.thedirectorsnotebook.com/guide/fonts/inter-latin-wght-normal.woff2) format("woff2")}
+html{scroll-behavior:smooth;scroll-padding-top:64px}
+body{background:#fbfaf7;font-size:16.5px;line-height:1.62;--gap:1em}
+.bar{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:8px;height:52px;padding:0 max(16px,calc((100vw - 1120px)/2));background:rgba(0,0,0,.92);backdrop-filter:blur(10px);color:var(--cream);font-size:14px;font-weight:600}
+.bar a{text-decoration:none;color:var(--cream);padding:8px 12px;border-radius:8px}
+.bar a:hover{background:rgba(252,247,233,.12)}
+.bar .sp{flex:1}
+.bar .pdf{background:var(--cream);color:#000}
+.bar .pdf:hover{background:#fff}
+.cover{min-height:calc(100vh - 52px);padding:56px 32px 28px}
+.cover .top{font-size:12px}
+.cover img{width:min(300px,56vw);height:auto}
+.cover h1{font-size:clamp(34px,5.4vw,58px);margin-top:44px}
+.cover .g{font-size:clamp(13px,1.5vw,17px);margin-top:16px}
+.cover .foot{max-width:1120px;padding-top:16px;font-size:13px}
+.wrap{max-width:820px;margin:0 auto;padding:0 24px}
+.tocpage{padding:88px 0 40px}
+.tocpage h2{font-size:clamp(36px,5vw,52px);font-weight:800;letter-spacing:-.03em;margin:0 0 14px}
+.tocpage .lede{font-size:19px;color:#3a3a3e;max-width:640px;line-height:1.5}
+.tocpage .toc{margin-top:40px;display:grid;grid-template-columns:1fr 1fr;column-gap:40px}
+.toc li{border-top:1px solid var(--line);padding:16px 0}
+.toc .n{font-size:26px;width:46px;line-height:1.1}
+.toc .t{font-size:18px}
+.toc .d{font-size:14px;line-height:1.45;margin-top:3px}
+.toc a:hover .t{color:var(--accent)}
+.opener{margin-top:72px;padding:72px max(24px,calc((100vw - 820px)/2)) 56px}
+.op-top{font-size:11px}
+.op-num{font-size:clamp(110px,17vw,190px);margin-top:54px}
+.chap-title{font-size:clamp(36px,5.2vw,56px);line-height:1.04;margin-top:26px}
+.op-lede{font-size:19px;line-height:1.5;margin-top:16px;max-width:640px}
+.op-in{margin-top:54px}
+.op-lab{font-size:11px;margin-bottom:10px}
+.op-list{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:repeat(var(--rows),auto);grid-auto-flow:column;column-gap:40px}
+.op-list li{padding:9px 0;font-size:15px}
+.op-list a:hover{color:#fff}
+.op-list a::after{content:"↓";opacity:.5}
+.content{max-width:820px;margin:0 auto;padding:44px 24px 0}
+.keep{margin-top:56px;padding-top:26px;border-top:1px solid var(--line)}
+.content>.keep:first-child{margin-top:0;border-top:0;padding-top:0}
+.content h3{font-size:25px}
+.keep4{margin-top:1.5em}.keep4 h4{margin-top:0}
+.two{grid-template-columns:minmax(0,300px) minmax(0,1fr)}
+figure .fr{box-shadow:0 12px 32px rgba(0,0,0,.09)}
+td,th{font-size:15px}
+.end{max-width:820px;margin:80px auto 0;padding:28px 24px 56px;border-top:1px solid var(--line);color:var(--mut);font-size:14px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.end a{color:var(--accent);text-decoration:none;font-weight:600}
+@media (max-width:700px){ol.key{grid-template-columns:1fr}.tocpage .toc{grid-template-columns:1fr}.op-list{display:block}.two,.grid4{grid-template-columns:1fr!important}.bar .hide{display:none}}
+@media print{.bar{display:none}}
+
+.bar button.sb{font:inherit;color:var(--cream);background:none;border:0;padding:8px 12px;border-radius:8px;cursor:pointer}
+.bar button.sb:hover{background:rgba(252,247,233,.12)}
+.gs{width:min(700px,94vw);max-width:none;margin:72px auto auto;padding:0;border:1px solid var(--line);border-radius:14px;background:#fff;color:var(--ink);box-shadow:0 30px 80px rgba(0,0,0,.35);overflow:hidden}
+.gs::backdrop{background:rgba(0,0,0,.55)}
+.gs .q{display:flex;align-items:center;gap:12px;padding:6px 10px 6px 20px;border-bottom:1px solid var(--line)}
+.gs input{flex:1;min-width:0;height:54px;border:0;outline:0;background:none;font:500 19px/1.2 Inter,system-ui,sans-serif;color:var(--ink)}
+.gs input::placeholder{color:#9a9aa0}
+.gs .x{font:700 11.5px/1 Inter,system-ui,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--mut);background:none;border:0;min-height:44px;padding:0 12px;cursor:pointer}
+.gs .res{max-height:min(62vh,560px);overflow:auto;overscroll-behavior:contain}
+.gs .r{display:block;width:100%;text-align:left;font:inherit;color:inherit;background:none;border:0;border-top:1px solid #efece4;padding:14px 20px;cursor:pointer}
+.gs .r:first-child{border-top:0}
+.gs .r.on,.gs .r:hover{background:var(--tint)}
+.gs .r .c{display:block;font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--mut)}
+.gs .r b{display:block;margin-top:4px;font-size:17px;letter-spacing:-.01em}
+.gs .r .s{display:block;margin-top:3px;font-size:14.5px;line-height:1.45;color:#4a4a4f}
+.gs mark{background:#fde9a8;color:inherit;border-radius:2px;padding:0 1px}
+.gs .msg{padding:18px 20px 20px;font-size:15px;color:var(--mut)}
+.gs .ft{display:flex;justify-content:space-between;gap:12px;padding:10px 20px;border-top:1px solid var(--line);font-size:12.5px;color:var(--mut)}
+h3[id]:focus{outline:none}
+h3.hit{animation:gshit 2.2s ease-out}
+@keyframes gshit{0%,35%{background:#fde9a8;box-shadow:0 0 0 8px #fde9a8}100%{background:transparent;box-shadow:0 0 0 8px transparent}}
+.bar a,.bar button{white-space:nowrap}.bar a:first-child{min-width:0;overflow:hidden;text-overflow:ellipsis}
+@media (max-width:700px){.gs{margin-top:60px}.gs .ft .k{display:none}}
+@media (max-width:560px){.bar{gap:2px}.bar a[href="#contents"]{display:none}}
+@media (hover:none){.gs .ft .k{display:none}}
+@media print{.gs{display:none}}
+</style><meta name="robots" content="noindex"></head><body>
+<nav class="bar"><a href="https://app.thedirectorsnotebook.com/guide/../" title="Back to the app">‹ The Director’s Notebook</a><span class="sp"></span><button class="sb" type="button" id="gsOpen" title="Search the guide">Search</button><a href="#contents">Contents</a><a class="pdf" href="https://app.thedirectorsnotebook.com/guide/The-Directors-Notebook-Guide.pdf" title="The whole guide as a PDF">Download PDF</a></nav>
+<header class="cover"><div class="top">Version of November 23, 2026</div><img src="https://app.thedirectorsnotebook.com/guide/img/logo.png" alt="The Director’s Notebook logo: a cream letter D shaped like a spiral-bound notebook, on black."><h1>The Director’s Notebook</h1><p class="g">The Guide</p><div class="foot"><span>Breakdown · Strategy · Floor Plan · Shot List</span><span>Prep · Scout · Set</span></div></header>
+<div class="wrap"><section class="tocpage" id="contents"><h2>Contents</h2><p class="lede">Every feature is covered the same way: what it is for, where it is, the steps with pictures, and what it will not do.</p><ol class="toc"><li><a href="#ch1"><span class="n">01</span><span class="tt"><span class="t">Start Here</span><span class="d">Installing on Mac and iPad, signing in and sync, projects and scenes, the four tabs, Prep / Scout / Set, Undo, backups, keyboard shortcuts.</span></span></a></li><li><a href="#ch2"><span class="n">02</span><span class="tt"><span class="t">From the Script</span><span class="d">Importing a script, Breakdown, Strategy, acts and story order, scene info.</span></span></a></li><li><a href="#ch3"><span class="n">03</span><span class="tt"><span class="t">Building the Set</span><span class="d">Walls, doors and windows, Draw a Building, templates, Overhead from an Address, Set from a Director’s Plan, locations, Layers.</span></span></a></li><li><a href="#ch4"><span class="n">04</span><span class="tt"><span class="t">Props and Pieces</span><span class="d">The library, vehicles, My Props, favorites, labels and colors, the Plain Shape.</span></span></a></li><li><a href="#ch5"><span class="n">05</span><span class="tt"><span class="t">Blocking</span><span class="d">Characters and positions, Moves To, Draw the Walk, turns, Times and speeds, playback, pages, Clear Moves.</span></span></a></li><li><a href="#ch6"><span class="n">06</span><span class="tt"><span class="t">Cameras and Shots</span><span class="d">Setups and versions, dolly moves, Follow, Track With, pans, lenses, the 180° line, storyboard frames, cuts.</span></span></a></li><li><a href="#ch7"><span class="n">07</span><span class="tt"><span class="t">Light and Time of Day</span><span class="d">Sun &amp; Shadows, Night Look, lighting pieces.</span></span></a></li><li><a href="#ch8"><span class="n">08</span><span class="tt"><span class="t">The Shot List</span><span class="d">Columns, ordering, numbering, shooting order, the gear list.</span></span></a></li><li><a href="#ch9"><span class="n">09</span><span class="tt"><span class="t">Scouting</span><span class="d">Photos, sketches, camera ideas, linking scenes.</span></span></a></li><li><a href="#ch10"><span class="n">10</span><span class="tt"><span class="t">On the Day</span><span class="d">What Set mode changes, Ready for Set.</span></span></a></li><li><a href="#ch11"><span class="n">11</span><span class="tt"><span class="t">Printing and Sharing</span><span class="d">The PDFs and their options, letterheads, the blocking as a video, approved people.</span></span></a></li><li><a href="#ch12"><span class="n">12</span><span class="tt"><span class="t">Reference</span><span class="d">Where everything is, what syncs, known limits, what’s new.</span></span></a></li></ol></section></div>
+<section class="chapter" id="ch1">
+<div class="opener"><div class="op-top"><span>The Director’s Notebook</span><span>The Guide</span></div>
+<div class="op-num">01</div>
+<h2 class="chap-title">Start Here</h2>
+<p class="op-lede">What the app is, how to put it on your Mac and iPad, how the screen is laid out, and how your work is saved.</p>
+<div class="op-in"><div class="op-lab">In this chapter</div><ol class="op-list" style="--rows:5"><li><a href="#c1-what-it-is">What it is</a></li><li><a href="#c1-installing-it">Installing it</a></li><li><a href="#c1-the-screen">The screen</a></li><li><a href="#c1-the-menu">The menu</a></li><li><a href="#c1-scenes-and-folders">Scenes and folders</a></li><li><a href="#c1-the-four-tabs">The four tabs</a></li><li><a href="#c1-saving-undo-and-earlier-versions">Saving, Undo and earlier versions</a></li><li><a href="#c1-signing-in-and-sync">Signing in and sync</a></li><li><a href="#c1-keyboard-shortcuts">Keyboard shortcuts</a></li></ol></div>
+</div>
+<div class="content">
+<div class="keep"><h3 id="c1-what-it-is">What it is</h3><p>The Director’s Notebook keeps a scene’s breakdown, strategy, floor plan and shot list in one place. You work on one scene at a time, and the four tabs at the top are four views of that same scene.</p><p>It runs in a browser and can be installed as an app. Once it has been opened on a device it keeps working without a connection.</p></div>
+
+
+<div class="keep"><h3 id="c1-installing-it">Installing it</h3><div class="where"><b>Where:</b> app.thedirectorsnotebook.com</div><h4>On the iPad</h4></div>
+
+
+<ol class="steps"><li>Open the address in Safari.</li><li>Tap Share, then <b>Add to Home Screen</b>.</li><li>Open it from the Home Screen from then on.</li></ol>
+<div class="keep4"><h4>On the Mac</h4><ol class="steps"><li>Open the address in Chrome.</li><li>Use Chrome’s menu to install the page as an app, then keep it in the Dock.</li></ol></div>
+
+<p class="note">The app updates itself. When a new version is ready it reloads at a quiet moment, or shows a Reload bar if you are in the middle of something. The version date is in Menu › Sync &amp; Backup.</p>
+<div class="keep"><h3 id="c1-the-screen">The screen</h3><figure><div class="fr"><img alt="The Floor Plan tab: a top bar, the plan in the middle with a set, two characters and a camera, the Shot List panel on the right, and a dark toolbar along the bottom." height="1133" src="https://app.thedirectorsnotebook.com/guide/img/main.jpg" width="1800"/><span class="mk" style="left:2.12%;top:6.40%">1</span><span class="mk" style="left:33.75%;top:6.40%">2</span><span class="mk" style="left:57.39%;top:6.40%">3</span><span class="mk" style="left:80.97%;top:6.40%">4</span><span class="mk" style="left:93.63%;top:6.40%">5</span><span class="mk" style="left:3.37%;top:93.02%">6</span><span class="mk" style="left:14.79%;top:93.02%">7</span><span class="mk" style="left:24.89%;top:93.02%">8</span><span class="mk" style="left:64.42%;top:93.02%">9</span><span class="mk" style="left:75.84%;top:93.02%">10</span></div><figcaption>Sc. 1 of the invented project, on the Floor Plan tab.</figcaption></figure></div>
+
+<ol class="key">
+<li><b>1</b><span><strong>Menu.</strong> Scenes, importing, exporting, sync and backups.</span></li>
+<li><b>2</b><span><strong>Folder and scene.</strong> Shows where you are. Tap it to move to another scene.</span></li>
+<li><b>3</b><span><strong>The four tabs.</strong> Breakdown, Strategy, Floor Plan, Shot List.</span></li>
+<li><b>4</b><span><strong>Prep · Scout · Set.</strong> The same scene, arranged for the stage of work you are in.</span></li>
+<li><b>5</b><span><strong>Status.</strong> Says whether your work is saved or synced. Tap it to sign in or see Sync.</span></li>
+<li><b>6</b><span><strong>Add.</strong> Characters, extras, cameras, props, set, lighting, annotations, a background image, and Measure a Distance.</span></li>
+<li><b>7</b><span><strong>Pages and Layers.</strong> Pages split a scene’s blocking. Layers shows, hides, fades and locks each kind of piece.</span></li>
+<li><b>8</b><span><strong>Undo and Redo,</strong> then Select, Draw, Frames, Fit to Screen and Rotate the Floor Plan.</span></li>
+<li><b>9</b><span><strong>Playback.</strong> Turn on the animation view, play the blocking, and step through its Times.</span></li>
+<li><b>10</b><span><strong>Shot List panel.</strong> Shows or hides the list beside the plan.</span></li>
+</ol>
+<p>The card at the top left of the plan is the scene’s heading. Tap it to add scene info.</p>
+<div class="keep"><h3 id="c1-the-menu">The menu</h3><div class="two">
+<figure style="margin-top:14px"><div class="fr"><img alt="The menu open: New Scene, Open Scene, This Scene, the folder’s Overview and Questions, Import, Export, Sync and Backup, Keyboard Shortcuts." height="1142" src="https://app.thedirectorsnotebook.com/guide/img/menu.jpg" width="800"/></div></figure>
+<div>
+<div class="where"><b>Where:</b> the three-line button at the top left.</div>
+<table><thead><tr><th>Group</th><th>What is inside</th></tr></thead><tbody>
+<tr><td>At the top</td><td>New Scene, Open Scene…, the folder’s Overview &amp; Questions…, Keyboard Shortcuts, The Guide</td></tr>
+<tr><td>This Scene</td><td>Scene Info…, Checklist…, Save as Template…, Add a Template to This Scene…, Save This Set as a Location…, Tidy Labels on This Page, Clear Moves…, Move This Scene to Trash</td></tr>
+<tr><td>Import</td><td>Import a Script…, Import a Breakdown and Strategy…</td></tr>
+<tr><td>Export</td><td>Export PDF…, Download This Page as an Image, Save the Blocking as a Video…, Productions &amp; Letterheads…</td></tr>
+<tr><td>Sync &amp; Backup</td><td>Ready for Set Check…, Save a Version Now…, Earlier Versions…, Back Up Everything, Restore from Backup…, Reload the App</td></tr>
+</tbody></table>
+<p>Each group opens a second list with a way back at the top.</p>
+</div></div></div>
+
+<div class="keep"><h3 id="c1-scenes-and-folders">Scenes and folders</h3><p>Scenes live in folders. A folder is usually one episode or one film, and importing a script makes a folder for it.</p><div class="where"><b>Where:</b> tap the folder and scene name in the top bar, or Menu › Open Scene…. On the Breakdown, Strategy and Shot List tabs the Library sits down the left side.</div><ul><li><b>New scene</b> and <b>New folder</b> are at the top of the Library.</li><li>Drag a scene by its grip to move it into a folder. The ••• beside a scene has the rest.</li><li>Scenes outside any folder are listed under <b>Not in a folder</b>.</li><li>The Library also holds <b>Templates</b> and the <b>Trash</b>.</li></ul></div>
+
+
+
+<div class="keep"><h3 id="c1-the-four-tabs">The four tabs</h3><div class="grid4">
+<figure><div class="fr"><img alt="The Breakdown tab." height="755" src="https://app.thedirectorsnotebook.com/guide/img/tab-breakdown.jpg" width="1200"/></div><figcaption><b>Breakdown.</b> What the scene is and what it needs.</figcaption></figure>
+<figure><div class="fr"><img alt="The Strategy tab." height="755" src="https://app.thedirectorsnotebook.com/guide/img/tab-strategy.jpg" width="1200"/></div><figcaption><b>Strategy.</b> How you mean to shoot it.</figcaption></figure>
+<figure><div class="fr"><img alt="The Floor Plan tab." height="755" src="https://app.thedirectorsnotebook.com/guide/img/tab-floor.jpg" width="1200"/></div><figcaption><b>Floor Plan.</b> The set, the blocking and the cameras.</figcaption></figure>
+<figure><div class="fr"><img alt="The Shot List tab." height="755" src="https://app.thedirectorsnotebook.com/guide/img/tab-shotlist.jpg" width="1200"/></div><figcaption><b>Shot List.</b> Every shot the cameras on the plan make.</figcaption></figure>
+</div></div>
+
+<p>Each tab has its own chapter. <b>Prep</b>, <b>Scout</b> and <b>Set</b> are covered in chapters 9 and 10.</p>
+<div class="keep"><h3 id="c1-saving-undo-and-earlier-versions">Saving, Undo and earlier versions</h3><p>There is no Save button. Work is saved as you go, and the status at the top right says so.</p><ul>
+<li><b>Undo and Redo</b> are on the toolbar.</li>
+<li><b>Earlier Versions…</b> keeps a copy every five minutes while you work, covering about the last six hours, plus one a day for 30 days. Restoring one replaces what is there now, and you can undo that.</li>
+<li><b>Save a Version Now…</b> keeps a copy under a name you choose until you delete it.</li>
+<li><b>Back Up Everything</b> makes a file you can keep anywhere. <b>Restore from Backup…</b> reads one back in.</li>
+</ul></div>
+
+
+<div class="where"><b>Where:</b> Menu › Sync &amp; Backup.</div>
+<p class="note"><b>What it will not do:</b> earlier versions live on the device you are using. They do not travel to your other devices. For a copy that does, use Back Up Everything.</p>
+<div class="keep"><h3 id="c1-signing-in-and-sync">Signing in and sync</h3><p>Signing in keeps the same scenes on every device. Without it, everything still works and stays on the one device.</p><div class="where"><b>Where:</b> tap the status at the top right.</div><ol class="steps"><li>The very first time, enter an email and password and tap <b>Create account</b>.</li><li>On your other device, <b>Sign in</b> with the same email and password.</li></ol></div>
+
+
+
+<ul><li>This is the app’s own account. It is separate from any other account you have.</li><li>Work done offline is sent when you are back online.</li><li>The Sync window shows when the cloud last confirmed your work, with <b>Sync now</b> and <b>Sign out</b>. Signing out leaves your work on the device.</li><li>If sync is limited to approved people, the owner adds each exact email under <b>Approved people…</b>.</li></ul>
+<div class="keep"><h3 id="c1-keyboard-shortcuts">Keyboard shortcuts</h3><div class="where"><b>Where:</b> press <kbd>?</kbd> on a computer, or Menu › Keyboard Shortcuts. The panel stays open while you work and lights up the keys that apply to what is selected.</div><p>On Windows, use Ctrl where this list shows ⌘.</p><h4>Scenes</h4></div>
+
+
+<table><tbody><tr><td><kbd>⌘O</kbd></td><td>Show the Library and search it</td></tr><tr><td><kbd>⇧⌘O</kbd></td><td>Open or organize scenes: folders, moving, Trash</td></tr><tr><td><kbd>⌘F</kbd></td><td>Search all scenes</td></tr><tr><td><kbd>⌘I</kbd></td><td>Scene info</td></tr><tr><td><kbd>⌘S</kbd></td><td>Confirms that your work is saved</td></tr><tr><td><kbd>⌘P</kbd></td><td>Export PDF</td></tr></tbody></table>
+<div class="keep4"><h4>Add</h4><table><tbody><tr><td><kbd>C</kbd></td><td>Character</td></tr><tr><td><kbd>A</kbd></td><td>Camera</td></tr><tr><td><kbd>P</kbd></td><td>Prop</td></tr><tr><td><kbd>S</kbd></td><td>Set piece</td></tr><tr><td><kbd>L</kbd></td><td>Lighting</td></tr><tr><td><kbd>T</kbd></td><td>Annotation</td></tr></tbody></table></div>
+<div class="keep4"><h4>With a character or camera selected</h4><table><tbody><tr><td><kbd>W</kbd></td><td>Moves to: then tap where</td></tr><tr><td><kbd>F</kbd></td><td>Comes from (character)</td></tr><tr><td><kbd>R</kbd></td><td>Add a turn (character) or a pan (camera)</td></tr><tr><td><kbd>X</kbd></td><td>180° line to (character)</td></tr><tr><td><kbd>Shift</kbd></td><td>By itself, opens the menu for what is selected. So does a right-click or a two-finger tap</td></tr><tr><td><kbd>E</kbd></td><td>Edit</td></tr><tr><td><kbd>⌘D</kbd></td><td>Duplicate</td></tr><tr><td><kbd>← ↑ → ↓</kbd></td><td>Nudge. Hold Shift for bigger steps</td></tr><tr><td><kbd>Delete</kbd></td><td>Delete</td></tr><tr><td><kbd>Esc</kbd></td><td>Deselect, or cancel a tool</td></tr></tbody></table></div>
+<div class="keep4"><h4>Selecting</h4><table><tbody><tr><td><kbd>G</kbd></td><td>Lasso: draw around things to select them together</td></tr><tr><td><kbd>Shift-click</kbd></td><td>Add a piece to the selection, or take it out</td></tr><tr><td><kbd>⌘G / ⇧⌘G</kbd></td><td>Group the selected pieces so they move as one, or ungroup them</td></tr><tr><td><kbd>⌘A</kbd></td><td>Select everything on this page</td></tr><tr><td><kbd>⌘Z / ⇧⌘Z</kbd></td><td>Undo, redo</td></tr></tbody></table></div>
+<div class="keep4"><h4>View</h4><table><tbody><tr><td><kbd>[  ]</kbd></td><td>Previous or next page</td></tr><tr><td><kbd>N</kbd></td><td>New page</td></tr><tr><td><kbd>V</kbd></td><td>Switch between the plan and the shot list</td></tr><tr><td><kbd>B</kbd></td><td>Show or hide storyboard frames</td></tr><tr><td><kbd>0</kbd></td><td>Fit to screen</td></tr><tr><td><kbd>+  −</kbd></td><td>Zoom in or out</td></tr><tr><td><kbd>Space</kbd></td><td>Play or pause the animation</td></tr><tr><td><kbd>Esc</kbd></td><td>Leave the animation view</td></tr><tr><td><kbd>?</kbd></td><td>Show or hide the shortcuts</td></tr></tbody></table></div>
+</div>
+</section>
+<section class="chapter" id="ch2">
+<div class="opener"><div class="op-top"><span>The Director’s Notebook</span><span>The Guide</span></div>
+<div class="op-num">02</div>
+<h2 class="chap-title">From the Script</h2>
+<p class="op-lede">Bring the script in, then say what each scene means and how you mean to shoot it.</p>
+<div class="op-in"><div class="op-lab">In this chapter</div><ol class="op-list" style="--rows:4"><li><a href="#c2-import-a-script">Import a Script</a></li><li><a href="#c2-scene-info">Scene info</a></li><li><a href="#c2-breakdown">Breakdown</a></li><li><a href="#c2-strategy">Strategy</a></li><li><a href="#c2-import-a-breakdown-and-strategy">Import a Breakdown and Strategy</a></li><li><a href="#c2-checklist">Checklist</a></li><li><a href="#c2-the-folder-s-overview">The folder’s Overview</a></li></ol></div>
+</div>
+<div class="content">
+<div class="keep"><h3 id="c2-import-a-script">Import a Script</h3><p>Makes a folder with one scene for every scene in the script, and a character for everyone who speaks.</p><div class="where"><b>Where:</b> Menu › Import › Import a Script…. Inside a folder’s window it is <b>Import script…</b>.</div><figure><div class="fr"><img alt="The Import window listing four scenes and three characters found in the script, with a folder name, each character’s sex, two checkboxes and an Import button." height="837" src="https://app.thedirectorsnotebook.com/guide/img/import-script.jpg" width="1000"/></div><figcaption>The app shows what it found before anything is added.</figcaption></figure></div>
+
+
+
+<ol class="steps">
+<li>Choose the script’s PDF.</li>
+<li>Name the new folder, and choose whether it sits at the top level or inside another folder.</li>
+<li>Check the characters. Untick anything that is not a character, and set each one’s sex. <b>guess</b> marks the ones the app worked out from the script, so look at those.</li>
+<li>Leave the two boxes checked to have saved set templates added at matching locations, and each scene’s characters placed in the scene ready to block.</li>
+<li>Tap <b>Import</b>.</li>
+</ol>
+<p>Each scene arrives with its number, heading and script pages. One Undo takes the whole import back.</p>
+<p class="note"><b>What it will not do:</b> it reads the text inside the PDF. A scanned script, which is only pictures of pages, has no text to read.</p>
+<div class="keep"><h3 id="c2-scene-info">Scene info</h3><div class="two" style="grid-template-columns:minmax(0,260px) minmax(0,1fr)">
+<figure style="margin-top:14px"><div class="fr"><img alt="The Scene info window with its nine fields." height="931" src="https://app.thedirectorsnotebook.com/guide/img/sceneinfo.jpg" width="560"/></div></figure>
+<div>
+<p>The facts about a scene that appear on its pages and printouts.</p>
+<div class="where"><b>Where:</b> tap the scene’s card at the top left of the plan, or Menu › This Scene › Scene Info…, or <kbd>⌘I</kbd>. The Breakdown and Strategy tabs have a <b>Scene info</b> button too.</div>
+<ul>
+<li>Scene number, title and scene heading.</li>
+<li>Episode or code, shoot day and shoot date.</li>
+<li>Script pages, in eighths.</li>
+<li><b>Act or sequence that starts at this scene.</b> Type a name here, such as ACT TWO, and the Spine shows the act beginning at this scene.</li>
+<li>Synopsis.</li>
+</ul>
+</div></div></div>
+
+<div class="keep"><h3 id="c2-breakdown">Breakdown</h3><p>The Breakdown tab asks one question: what does the scene mean?</p><figure><div class="fr"><img alt="The Breakdown tab: the Library on the left and the scene’s breakdown as a row of columns." height="1007" src="https://app.thedirectorsnotebook.com/guide/img/breakdown.jpg" width="1600"/></div></figure></div>
+
+
+<ul>
+<li><b>The columns</b> are Synopsis, Snapshot, Imagery &amp; Tone, The Core, Elevating the Scene and Pitfalls. Each starts with prompts, such as Scene Needs and Actor Direction Tips under The Core.</li>
+<li><b>+ Label</b> adds a prompt of your own to a column.</li>
+<li><b>Columns…</b> changes the columns themselves.</li>
+<li><b>Story</b> marks the scene as A, B, C or D story. <b>Edit…</b> changes that list.</li>
+<li><b>Questions column</b> adds a column for open questions. They are gathered for the whole folder in the Overview.</li>
+<li><b>B</b>, <b>• List</b> and <b>1. List</b> format what you type.</li>
+</ul>
+<div class="keep"><h3 id="c2-strategy">Strategy</h3><p>The Strategy tab asks the next question: how do we make the meaning visible?</p><figure><div class="fr"><img alt="The Strategy tab: sections for Power Dynamics, Camera Strategy, Key Visuals, Blocking Rationale and more." height="1007" src="https://app.thedirectorsnotebook.com/guide/img/strategy.jpg" width="1600"/></div></figure></div>
+
+
+<ul>
+<li><b>The sections</b> are Power Dynamics (start, end and main event), Camera Strategy, Key Visuals, Blocking Rationale, Arc of Scene and Geometry, and Story and Tone Meeting Notes.</li>
+<li><b>+ Add a section</b> adds your own. The <b>⋯</b> on a section has its options.</li>
+<li><b>+ Add a cut to another scene</b> records a cut you are planning between this scene and another.</li>
+</ul>
+<div class="keep"><h3 id="c2-import-a-breakdown-and-strategy">Import a Breakdown and Strategy</h3><p>Brings in breakdowns and strategies you have already written in Word.</p><div class="where"><b>Where:</b> Menu › Import › Import a Breakdown and Strategy…. On the Breakdown tab it is <b>Import from Word…</b>.</div><ul>
+<li>It reads a Word file (.docx) and looks for Director’s Notebook and Shooting Strategy pages.</li>
+<li>Pages are matched to scenes in the folder by scene number. A scene that does not exist yet is made.</li>
+<li>A scene that already has writing in it is left alone unless you choose to replace it.</li>
+</ul></div>
+
+
+
+<p class="note"><b>What it will not do:</b> it cannot open the older .doc format. Save the file as .docx first.</p>
+<div class="keep"><h3 id="c2-checklist">Checklist</h3><p>A to-do list that belongs to one scene. Add items, tick them off, and clear the finished ones with <b>Remove Finished</b>.</p><div class="where"><b>Where:</b> Menu › This Scene › Checklist…, or the <b>Checklist</b> button on the Breakdown and Strategy tabs.</div></div>
+
+
+<div class="keep"><h3 id="c2-the-folder-s-overview">The folder’s Overview</h3><p>Shows the whole episode or film at once, in four views.</p><div class="where"><b>Where:</b> Menu › the line that names your folder, ending in <b>Overview &amp; Questions…</b>.</div><figure><div class="fr"><img alt="The Overview on its Scenes view: one row per scene with progress for Breakdown, Strategy, Floor Plan and Shot List." height="997" src="https://app.thedirectorsnotebook.com/guide/img/overview.jpg" width="1400"/></div><figcaption>Scenes: how far along each scene is on each tab.</figcaption></figure></div>
+
+
+
+<figure><div class="fr"><img alt="The Overview on its Spine view: the four scenes as blocks in story order, sized by page count, with a day or night band under each." height="997" src="https://app.thedirectorsnotebook.com/guide/img/spine.jpg" width="1400"/></div><figcaption>Spine: the scenes in story order, sized by page count.</figcaption></figure>
+<table><thead><tr><th>View</th><th>What it shows</th></tr></thead><tbody>
+<tr><td>Scenes</td><td>Each scene with its progress on the Breakdown, Strategy, Floor Plan and Shot List, and how many questions are open.</td></tr>
+<tr><td>Spine</td><td>The scenes as blocks in story order, sized by page count, setups or time estimate, with a band for day or night. Tap a scene to see what it is, or to start an act or a sequence there. Below it, where each story lives.</td></tr>
+<tr><td>Cuts</td><td>The last frame of each scene beside the first frame of the next, so you can judge every cut between scenes.</td></tr>
+<tr><td>Questions</td><td>Everything written in the scenes’ Questions columns.</td></tr>
+</tbody></table>
+<p><b>Export PDF…</b> in the Overview prints the view you are on.</p>
+</div>
+</section>
+<section class="chapter" id="ch3">
+<div class="opener"><div class="op-top"><span>The Director’s Notebook</span><span>The Guide</span></div>
+<div class="op-num">03</div>
+<h2 class="chap-title">Building the Set</h2>
+<p class="op-lede">Six ways to get a set onto the plan, from drawing a wall to reading a director’s plan, and how to keep one set in step across scenes.</p>
+<div class="op-in"><div class="op-lab">In this chapter</div><ol class="op-list" style="--rows:6"><li><a href="#c3-add-set">Add Set</a></li><li><a href="#c3-walls">Walls</a></li><li><a href="#c3-doors-and-windows">Doors and windows</a></li><li><a href="#c3-draw-a-building">Draw a Building</a></li><li><a href="#c3-templates">Templates</a></li><li><a href="#c3-overhead-from-an-address">Overhead from an Address</a></li><li><a href="#c3-set-from-a-director-s-plan">Set from a Director’s Plan</a></li><li><a href="#c3-background-image">Background image</a></li><li><a href="#c3-locations">Locations</a></li><li><a href="#c3-layers">Layers</a></li><li><a href="#c3-measure-a-distance">Measure a Distance</a></li></ol></div>
+</div>
+<div class="content">
+<div class="keep"><h3 id="c3-add-set">Add Set</h3><p>Everything that makes up the place: walls, doors, windows, stairs, streets, water and whole buildings.</p><div class="where"><b>Where:</b> Add › Add Set…, or press <kbd>S</kbd>.</div><figure><div class="fr"><img alt="The Add Set window: a search box, three blue buttons, then pieces grouped as Walls and Doors and Streets, Ground and Water." height="973" src="https://app.thedirectorsnotebook.com/guide/img/addset.jpg" width="1100"/></div></figure></div>
+
+
+
+<ul>
+<li>Tap a piece and it lands in the middle of the view. Drag it where you want it.</li>
+<li><b>Search set pieces</b> finds one by name. <b>Edit Favorites</b> keeps the ones you use most at the top.</li>
+<li>The three blue buttons are the larger tools, each covered below.</li>
+</ul>
+<table><thead><tr><th>Group</th><th>Pieces</th></tr></thead><tbody>
+<tr><td>Walls and doors</td><td>Wall Tool, Window, Open Door, Closed Door, Double Open Door, Double Closed Door, Medium Opening, Prison Bars, Stairs, Round Column, Square Pillar, Railing, Fence, Archway, Curtain, Elevator</td></tr>
+<tr><td>Streets, ground and water</td><td>Street (2 lanes), Avenue (4 lanes), Intersection (4-way), Intersection (T), Sidewalk, Crosswalk, Parking Lot, Platform Edge, Fountain, Swimming Pool, Pond, Dock</td></tr>
+<tr><td>Buildings</td><td>Houses from a Craftsman Bungalow to a Row of Brownstones, plus a Diner, Corner Store, Gas Station, Church and more</td></tr>
+</tbody></table>
+<div class="keep"><h3 id="c3-walls">Walls</h3><div class="where"><b>Where:</b> Add › Add Set… › Wall Tool.</div><ol class="steps"><li>Tap to place each corner.</li><li>The wall finishes by itself when it meets another corner. Or tap <b>Done</b>.</li></ol></div>
+
+
+<p>Tap a wall for its menu:</p>
+<ul>
+<li><b>Move All Joined Walls</b> moves the room as one.</li>
+<li><b>Unhook This Wall</b> frees it from its neighbors.</li>
+<li><b>Add a Corner Here</b> and <b>Remove Nearest Corner</b> reshape it.</li>
+<li><b>Add Side Walls</b> adds a wall at right angles from each end, making three sides of a room.</li>
+</ul>
+<div class="keep"><h3 id="c3-doors-and-windows">Doors and windows</h3><p>Drag a door or window onto a wall and it attaches, cutting its own opening. It then travels with the wall.</p><ul>
+<li><b>Flip to Other Side</b> swings a door the other way.</li>
+<li><b>Mirror</b> moves the hinge to the other jamb.</li>
+<li><b>Change Type…</b> swaps it, for example an open door for a closed one.</li>
+<li><b>Detach from Wall</b> lets it stand free.</li>
+<li><b>Allow Resizing</b>, <b>Keep Proportions</b> and <b>Reset Size</b> control its size.</li>
+</ul></div>
+
+
+<div class="keep"><h3 id="c3-draw-a-building">Draw a Building</h3><p>For a building seen from above, drawn to the size you want.</p><div class="where"><b>Where:</b> Add › Add Set… › <b>Draw a Building…</b></div><figure><div class="fr"><img alt="A building just drawn on the plan, 24 by 16 feet, with its menu open: Width, Depth, Flat Roof, Gable Roof, Mark the Front, Door on the Front, Roof On." height="800" src="https://app.thedirectorsnotebook.com/guide/img/building-menu.jpg" width="1100"/></div><figcaption>A 24 by 16 ft building and its menu.</figcaption></figure></div>
+
+
+
+<ol class="steps">
+<li>Choose <b>Rectangle</b> and drag from one corner to the opposite one, or choose <b>Trace Corners</b> and tap each corner, then Done.</li>
+<li>Lengths show in feet as you draw.</li>
+<li>In its menu, type an exact <b>Width</b> and <b>Depth</b>, and choose <b>Flat Roof</b> or <b>Gable Roof</b>.</li>
+<li><b>Mark the Front…</b>, then tap the side that faces the street. <b>Door on the Front</b> puts a door there.</li>
+</ol>
+<figure><div class="fr"><img alt="The same building with Roof On unchecked: its outline shown as walls with a door on the front, corner handles and lengths on each side." height="580" src="https://app.thedirectorsnotebook.com/guide/img/building-walls.jpg" width="900"/></div><figcaption>Roof On unchecked: the same shape as walls, ready to block inside.</figcaption></figure>
+<ul><li>Selected, it has a handle on each corner and a plus on each side to add a corner.</li><li>Doors and windows attach to its walls, and it casts a shadow when the sun is on.</li></ul>
+<p class="note"><b>What it will not do:</b> roofs are flat or gable only, and Roof On belongs to the building, so it is the same in every scene that shares it.</p>
+<div class="keep"><h3 id="c3-templates">Templates</h3><p>Ready-made sets and stagings to start from, and a way to keep your own.</p><div class="where"><b>Where:</b> Menu › This Scene › Add a Template to This Scene…, and Save as Template….</div><div class="two" style="grid-template-columns:minmax(0,280px) minmax(0,1fr)">
+<figure style="margin-top:14px"><div class="fr"><img alt="The Add a template window listing indoor sets such as Bar, Bedroom, Conference Room and Diner." height="911" src="https://app.thedirectorsnotebook.com/guide/img/templates.jpg" width="640"/></div></figure>
+<div>
+<table><thead><tr><th>Kind</th><th>Templates</th></tr></thead><tbody>
+<tr><td>Indoor sets</td><td>Bar, Bedroom, Conference Room, Diner, Hallway, Hospital Room, Interrogation Room, Kitchen, Living Room, Office, Precinct Bullpen</td></tr>
+<tr><td>Outdoor sets</td><td>Alley, Park, Parking Lot, Street Corner</td></tr>
+<tr><td>Two characters</td><td>Across a Table, Deep Staging, Face to Face, Front Seat of a Car, Side by Side at a Bar, Walk and Talk</td></tr>
+<tr><td>Three characters</td><td>Triangle Standing, Two Across from One</td></tr>
+<tr><td>Four or more</td><td>Circle Standing, Dinner Table</td></tr>
+</tbody></table>
+<p><b>Save as Template…</b> keeps the open scene’s set under a name. Give it the location it is for, and scenes whose heading matches are offered it, including scenes from scripts you import later. You can keep the characters and cameras with it.</p>
+</div></div></div>
+
+
+
+<div class="keep"><h3 id="c3-overhead-from-an-address">Overhead from an Address</h3><p>Draws the block around a real address: its streets, lots, houses, woods and water, to scale, with north marked.</p><div class="where"><b>Where:</b> Add › Add Set… › <b>Overhead from an Address…</b></div><ol class="steps"><li>Type the address and tap Draw.</li><li>To see the real ground, open Layers and turn on <b>Aerial Photo</b> under Background Image.</li></ol></div>
+
+
+
+<ul><li>It needs a connection, because it reads public map data.</li><li>Trees and bushes are added for dressing. Uncheck that in the window if you want it bare.</li><li>The streets come from OpenStreetMap. If you publish a plan made this way, credit OpenStreetMap.</li></ul>
+<p class="note"><b>What it will not do:</b> it knows outlines, not what is on a lot. A pool or a driveway will not appear, so use the Aerial Photo to place those. It has been tested with New Jersey addresses; elsewhere it may find less.</p>
+<div class="keep"><h3 id="c3-set-from-a-director-s-plan">Set from a Director’s Plan</h3><p>Puts the art department’s plan under the floor at true size, and builds what it can read from it as pieces.</p><div class="where"><b>Where:</b> Add › Add Set… › <b>Set from a Director’s Plan…</b></div><div class="grid4">
+<figure><div class="fr"><img alt="The first window: the plan’s page, the scale read from the title block, and two checkboxes." height="988" src="https://app.thedirectorsnotebook.com/guide/img/plan1.jpg" width="900"/></div><figcaption>1. The scale is read from the title block. Correct it if it is wrong.</figcaption></figure>
+<figure><div class="fr"><img alt="The second window, titled What are these?, showing two repeated shapes with a picture, a count and a size, and a choice for each." height="780" src="https://app.thedirectorsnotebook.com/guide/img/plan2.jpg" width="900"/></div><figcaption>2. Say what each repeated shape is.</figcaption></figure>
+</div></div>
+
+
+
+<figure><div class="fr"><img alt="The plan under the floor with walls built over it, four washers along the top wall and three tables in the middle." height="580" src="https://app.thedirectorsnotebook.com/guide/img/plan3.jpg" width="900"/></div><figcaption>3. The plan sits under the floor and the pieces are built on top. This plan is invented.</figcaption></figure>
+<ol class="steps">
+<li>Choose the PDF. If it has several pages, tap the one you want.</li>
+<li>Check the scale, then tap <b>Place the Plan</b>.</li>
+<li>If shapes repeat on the plan, say what each one is: a stock piece, a plain shape you can name, or leave it out.</li>
+</ol>
+<ul>
+<li>It reads solid walls, glass walls, doors from their arcs, windows and stairs, and places furniture by size.</li>
+<li>The plan’s opacity is the <b>Background Image</b> slider in Layers.</li>
+<li>One Undo takes back the plan and everything that came with it.</li>
+</ul>
+<p class="note"><b>What it will not do:</b> it reads square-on walls only, not angled ones. It does not read which way a piece faces, and it misses some doors and chairs. Treat the result as a first pass to correct against the plan underneath.</p>
+<div class="keep"><h3 id="c3-background-image">Background image</h3><p>Any picture can sit under the plan to trace over: a location photo, a sketch, a plan.</p><div class="where"><b>Where:</b> Add › Background Image….</div><p>After you add one, the app offers to use it in the other scenes at the same place. Its opacity is in Layers.</p></div>
+
+
+
+<div class="keep"><h3 id="c3-locations">Locations</h3><p>One set shared by every scene that plays there. Change it once and it changes everywhere.</p><div class="where"><b>Where:</b> Menu › This Scene › Save This Set as a Location…. Other scenes join with Use a Location….</div><figure><div class="fr"><img alt="The Save this set as a location window: a name, and the other scenes at the same place offered with checkboxes." height="676" src="https://app.thedirectorsnotebook.com/guide/img/location.jpg" width="900"/></div></figure></div>
+
+
+
+<ul>
+<li><b>Shared:</b> walls, set pieces, props and the plan image.</li>
+<li><b>Kept by each scene:</b> characters, cameras, lights, notes and drawings.</li>
+<li>Scenes at the same place are offered when you save. A linked scene gets this set in place of its own.</li>
+</ul>
+<div class="keep"><h3 id="c3-layers">Layers</h3><div class="two" style="grid-template-columns:minmax(0,250px) minmax(0,1fr)">
+<figure style="margin-top:14px"><div class="fr"><img alt="The Layers window: an opacity slider and a lock for each kind of piece, then visibility switches." height="1034" src="https://app.thedirectorsnotebook.com/guide/img/layers.jpg" width="560"/></div></figure>
+<div>
+<p>Shows, fades and locks each kind of piece.</p>
+<div class="where"><b>Where:</b> Layers, on the toolbar.</div>
+<ul>
+<li><b>The layers</b> are Characters, Arrows, Cameras, Storyboards, Props, Set, Lighting, Drawings and Labels. Each has an opacity slider and a lock. <b>Lock all</b> locks everything.</li>
+<li><b>Visibility</b> switches: Locked Items, Shot Labels, Shot Descriptions, Smart Guides, Sun &amp; Shadows, Night Look and Background Image.</li>
+</ul>
+<p>For example, fade the Set layer while you block, or lock it so a wall cannot be nudged by accident.</p>
+</div></div></div>
+
+<div class="keep"><h3 id="c3-measure-a-distance">Measure a Distance</h3><div class="where"><b>Where:</b> Add › Measure a Distance.</div><p>Tap two points and the distance between them shows in feet. Tap <b>Done</b> to finish.</p></div>
+
+
+</div>
+</section>
+<section class="chapter" id="ch4">
+<div class="opener"><div class="op-top"><span>The Director’s Notebook</span><span>The Guide</span></div>
+<div class="op-num">04</div>
+<h2 class="chap-title">Props and Pieces</h2>
+<p class="op-lede">Furniture, vehicles and everything else that dresses a set, plus notes and drawings on the plan.</p>
+<div class="op-in"><div class="op-lab">In this chapter</div><ol class="op-list" style="--rows:3"><li><a href="#c4-add-prop">Add Prop</a></li><li><a href="#c4-working-with-a-piece">Working with a piece</a></li><li><a href="#c4-details">Details</a></li><li><a href="#c4-my-props-and-the-plain-shape">My Props and the Plain Shape</a></li><li><a href="#c4-notes-and-drawings">Notes and drawings</a></li></ol></div>
+</div>
+<div class="content">
+<div class="keep"><h3 id="c4-add-prop">Add Prop</h3><div class="where"><b>Where:</b> Add › Add Prop…, or press <kbd>P</kbd>.</div><figure><div class="fr"><img alt="The Add Prop window: a search box and pieces grouped under Furniture, Kitchen and Bath, Office and more." height="973" src="https://app.thedirectorsnotebook.com/guide/img/addprop.jpg" width="1100"/></div></figure></div>
+
+
+<p>Tap a piece and it is placed on the plan. Search finds one by name, and <b>Edit Favorites</b> keeps your regulars at the top.</p>
+<table><thead><tr><th>Group</th><th>Examples</th></tr></thead><tbody>
+<tr><td>Furniture</td><td>Tables, Chair, Armchair, Sofa, Bench, beds, Cell Bunk, Desk, Bookshelf, TV, Rug, Potted Plant, pianos</td></tr>
+<tr><td>Kitchen and bath</td><td>Kitchen Counter, Kitchen Island, Fridge, Stove, Sink, Washer, Dryer, Toilet, Bathtub, Shower</td></tr>
+<tr><td>Office</td><td>Cubicle, Conference Table, Filing Cabinet, Whiteboard, Copier, Laptop, Monitor, Cell Phone</td></tr>
+<tr><td>Medical</td><td>Hospital Bed, Gurney, IV Pole, Wheelchair, Patient Monitor</td></tr>
+<tr><td>Courtroom</td><td>Judge’s Bench, Witness Stand, Jury Box, Counsel Table, Gallery Pew, Lectern</td></tr>
+<tr><td>Stores and public places</td><td>Store Shelving, Checkout Counter, L-Shaped Counter, ATM, Vending Machine, Reception Desk, Lockers, Plain Shape</td></tr>
+<tr><td>Restaurant and bar</td><td>Booth, Bar Counter, Café Table, Plate, Cup, Glass, Bottle</td></tr>
+<tr><td>Vehicles</td><td>Car, SUV, Pickup Truck, Taxi, buses, Semi Truck, Motorcycle, Bicycle, boats, Helicopter, planes</td></tr>
+<tr><td>Emergency vehicles</td><td>Police Car, Police SUV, SWAT Truck, Ambulance, Fire Engine, Ladder Truck, Police Helicopter</td></tr>
+<tr><td>Street</td><td>Street Lamp, Fire Hydrant, Traffic Cone, Trash Can, Dumpster, Mailbox, Bus Shelter</td></tr>
+<tr><td>Nature and animals</td><td>Tree, Bush, Hedge, Rock, Dog, Cat, Horse</td></tr>
+<tr><td>Hand props</td><td>Book, Briefcase, Suitcase, Bag, Cardboard Box, Keys, Cash, Flashlight</td></tr>
+<tr><td>Weapons, explosions and fire</td><td>Gun, Rifle, Sword, Explosion, Sparks, Fire, Smoke, Blast Radius</td></tr>
+<tr><td>Film gear</td><td>Actor Mark, Dolly Track, Dolly, Crane, C-Stand, Light Stand, Flag, Apple Box, Director’s Chair, Monitor Village</td></tr>
+</tbody></table>
+<p>There are also groups for Transit, Crime Scene, and Parks and Outdoors.</p>
+<div class="keep"><h3 id="c4-working-with-a-piece">Working with a piece</h3><div class="two" style="grid-template-columns:minmax(0,230px) minmax(0,1fr)"><figure style="margin-top:14px"><div class="fr"><img alt="The menu on a desk: Moves To, Comes From, Add Label, Change Type, Reset Size, Mirror, Allow Resizing, Keep Proportions, Details, Color, Pages, Duplicate, Lock in Place, Bring to Front, Send to Back, Delete." height="921" src="https://app.thedirectorsnotebook.com/guide/img/propmenu.jpg" width="420"/></div></figure><div>
+<div class="where"><b>Where:</b> the piece’s menu. On the iPad, tap a selected piece again. On a computer, select it and press <kbd>Shift</kbd>, or right-click.</div>
+<ul>
+<li><b>Moves To…</b> and <b>Comes From…</b> give a piece positions of its own, so a car can drive or a chair can be pulled out.</li>
+<li><b>Add Label…</b> names it on the plan.</li>
+<li><b>Change Type…</b> swaps it for another piece in the same spot.</li>
+<li><b>Mirror</b> flips it. <b>Allow Resizing</b> and <b>Keep Proportions</b> control stretching, and <b>Reset Size</b> puts it back.</li>
+<li><b>Color</b> recolors it.</li>
+<li><b>Lock in Place</b> stops it moving by accident.</li>
+<li><b>Bring to Front</b> and <b>Send to Back</b> settle what sits on top.</li>
+</ul></div></div></div>
+
+<div class="keep"><h3 id="c4-details">Details</h3><div class="where"><b>Where:</b> the piece’s menu › Details….</div><p>Details opens a panel at the side for the finer settings of whatever is selected.</p><ul>
+<li>A prop has its <b>Label</b>, its <b>Fill</b> color and the pages it shows on.</li>
+<li>A light adds the <b>Beam</b> slider.</li>
+<li>A character or a camera has a fuller panel. See Chapters 5 and 6.</li>
+</ul></div>
+
+
+
+<div class="keep"><h3 id="c4-my-props-and-the-plain-shape">My Props and the Plain Shape</h3><ul>
+<li>The <b>Plain Shape</b> is a simple block you can size and label, for anything the library does not have.</li>
+<li><b>My Props</b> are pieces you have made yourself. Select several pieces, open the menu and choose <b>Save as My Prop…</b>. Name it, and it appears under My Props in Add Prop on every device signed in to your account.</li>
+<li>Characters, cameras, drawings and uploaded images cannot be saved in a prop. They stay with their scene.</li>
+<li>Plain shapes you name while reading a director’s plan are kept in My Props too.</li>
+</ul></div>
+
+<div class="keep"><h3 id="c4-notes-and-drawings">Notes and drawings</h3><div class="where"><b>Where:</b> Add › Add Annotation…, or press <kbd>T</kbd>. Freehand drawing is <b>Draw</b> on the toolbar.</div><ul>
+<li><b>Annotations</b> are Text, Mask, Straight Arrow and Curved Arrow.</li>
+<li><b>Draw</b> has Pen, Arrow, Circle and Erase. Tap Done when you finish.</li>
+<li>Menu › This Scene › <b>Tidy Labels on This Page</b> spreads labels out so they do not overlap.</li>
+</ul></div>
+
+
+</div>
+</section>
+<section class="chapter" id="ch5">
+<div class="opener"><div class="op-top"><span>The Director’s Notebook</span><span>The Guide</span></div>
+<div class="op-num">05</div>
+<h2 class="chap-title">Blocking</h2>
+<p class="op-lede">Putting people on the plan, moving them through the scene, and playing it back.</p>
+<div class="op-in"><div class="op-lab">In this chapter</div><ol class="op-list" style="--rows:4"><li><a href="#c5-add-a-character">Add a character</a></li><li><a href="#c5-positions-and-moves">Positions and moves</a></li><li><a href="#c5-draw-the-walk">Draw the Walk</a></li><li><a href="#c5-times-and-playback">Times and playback</a></li><li><a href="#c5-a-time-s-menu-speed-labels-and-order">A Time’s menu: speed, labels and order</a></li><li><a href="#c5-pages-and-blocking-plans">Pages and blocking plans</a></li><li><a href="#c5-selecting-several-things">Selecting several things</a></li><li><a href="#c5-clear-moves">Clear Moves</a></li></ol></div>
+</div>
+<div class="content">
+<div class="keep"><h3 id="c5-add-a-character">Add a character</h3><div class="two" style="grid-template-columns:minmax(0,300px) minmax(0,1fr)"><figure style="margin-top:14px"><div class="fr"><img alt="The Add a character window: the cast in this project, or a new character with a name, type and color." height="653" src="https://app.thedirectorsnotebook.com/guide/img/addchar.jpg" width="640"/></div></figure><div>
+<div class="where"><b>Where:</b> Add › Add Character…, or press <kbd>C</kbd>.</div>
+<ul>
+<li>Pick someone from the <b>cast in this project</b>, or type a new name.</li>
+<li>A character keeps their name and color in every scene of the folder.</li>
+</ul>
+<p><b>Add Extras…</b> places a group of background people at once. You choose how many, a group name, their arrangement and color. They are numbered, drawn a little smaller than the cast, and can walk like anyone else.</p></div></div></div>
+
+<div class="keep"><h3 id="c5-positions-and-moves">Positions and moves</h3><div class="two" style="grid-template-columns:minmax(0,230px) minmax(0,1fr)"><figure style="margin-top:14px"><div class="fr"><img alt="The menu on a character at position 2 of 3: Moves To, Comes From, Add a Turn, 180 degree Line To, Put On the Rug, posture, label, Character Details, Plays in Time, color, pages, Duplicate, Lock in Place, Delete." height="921" src="https://app.thedirectorsnotebook.com/guide/img/charmenu.jpg" width="420"/></div></figure><div>
+<div class="where"><b>Where:</b> the character’s menu. Tapping a position’s number opens it too. <kbd>W</kbd> is Moves To and <kbd>F</kbd> is Comes From.</div>
+<ol class="steps"><li>Tap <b>Moves To…</b></li><li>Tap where the character goes next.</li></ol>
+<p>Each stop is a numbered <b>position</b>, joined by a dashed path. <b>Comes From…</b> adds a position before the one you tapped.</p>
+<ul>
+<li><b>Add a Turn</b> (<kbd>R</kbd>) turns the character on the spot. Drag its number to point it.</li>
+<li><b>Posture</b> is Standing, Seated, Kneeling or Lying.</li>
+<li><b>Put On…</b> or <b>Put In…</b> appears when a character is over a piece or a vehicle. It attaches them, so moving or turning the piece carries them. <b>Take Off…</b> detaches them.</li>
+<li><b>180° Line To…</b> (<kbd>X</kbd>) draws the line between two characters.</li>
+<li><b>Delete Position</b> removes one stop. <b>Delete All</b> removes the character from the scene.</li>
+<li><b>Character Details…</b> opens a panel for the name, color and type, the position you tapped, and the pages the character shows on. The type marks the figure: one stripe for male, three for female.</li>
+</ul></div></div></div>
+
+<div class="keep"><h3 id="c5-draw-the-walk">Draw the Walk</h3><p>For a path that is not a straight line: around furniture, through a doorway, along a curve.</p><div class="where"><b>Where:</b> the character’s menu › Moves To… › <b>Draw the Walk</b> in the bar at the top.</div><div class="grid4">
+<figure><div class="fr"><img alt="The bar at the top reads Draw the Walk. A freehand line runs from a seated character, down past a rug and along the bottom of the room." height="738" src="https://app.thedirectorsnotebook.com/guide/img/walk-drawing.jpg" width="1100"/></div><figcaption>Draw where the character goes. Lift to finish.</figcaption></figure>
+<figure><div class="fr"><img alt="The line has become a curved dashed path ending at a second numbered position by the door." height="738" src="https://app.thedirectorsnotebook.com/guide/img/walk-result.jpg" width="1100"/></div><figcaption>The line becomes the move, with bends where yours bent. Drag a blue dot to adjust it.</figcaption></figure>
+</div></div>
+
+
+
+<div class="keep"><h3 id="c5-times-and-playback">Times and playback</h3><p>A <b>Time</b> is a beat of the scene. Everything set to play in the same Time moves together.</p><div class="where"><b>Where:</b> the sun button on the toolbar, with Play and the Times beside it.</div><figure><div class="fr"><img alt="The animation view with Time 1 chosen: the first positions of two characters are solid and everything else is faded. The toolbar shows the sun button lit, Play, and Times 1 and 2." height="944" src="https://app.thedirectorsnotebook.com/guide/img/anim.jpg" width="1500"/></div><figcaption>The animation view at Time 1. What plays in this Time is solid, and the rest is faded.</figcaption></figure></div>
+
+
+
+<ul>
+<li>Tap the sun button to turn on the animation view.</li>
+<li>Tap a Time’s number, then tap a position to put it in that Time. Tap it again to take it out.</li>
+<li><b>Plays in Time</b> in a character’s or camera’s menu does the same job from the plan.</li>
+<li><b>Play</b>, or <kbd>Space</kbd>, plays the blocking.</li>
+<li>The eye button shows the other Times faded, or hides them.</li>
+<li>Tap the sun again, or press <kbd>Esc</kbd>, to go back to editing.</li>
+</ul>
+<div class="keep"><h3 id="c5-a-time-s-menu-speed-labels-and-order">A Time’s menu: speed, labels and order</h3><div class="two" style="grid-template-columns:minmax(0,260px) minmax(0,1fr)"><figure style="margin-top:14px"><div class="fr"><img alt="The Edit Time 1 menu: Insert Time Before, Insert Time After, Delete Time, Insert Section Label, Actor Speed and Camera Speed sliders, Same Speed, and Slow, Normal and Fast playback." height="820" src="https://app.thedirectorsnotebook.com/guide/img/timepop.jpg" width="420"/></div></figure><div>
+<div class="where"><b>Where:</b> in the animation view, tap the Time you are on.</div>
+<ul>
+<li><b>Insert Time Before</b> and <b>Insert Time After</b> make room for a new beat. <b>Delete Time</b> removes one.</li>
+<li><b>Insert Section Label…</b> names a stretch of the scene on the toolbar.</li>
+<li><b>Actor Speed</b> and <b>Camera Speed</b> set how fast things move in this Time. Turn off <b>Same Speed</b> to set them apart.</li>
+<li><b>Slow</b>, <b>Normal</b> and <b>Fast</b> set how fast playback runs. <b>Loop</b> plays it again and again.</li>
+<li><b>Save as Video…</b> records the blocking. See Chapter 11.</li>
+</ul></div></div></div>
+
+<div class="keep"><h3 id="c5-pages-and-blocking-plans">Pages and blocking plans</h3><div class="where"><b>Where:</b> the Pages button on the toolbar.</div><ul>
+<li><b>Pages</b> split a long scene’s blocking into parts. <b>All Pages</b> shows everything at once. <b>New Page…</b> adds one, and each piece’s menu says which pages it is on.</li>
+<li><b>Blocking plans</b> are alternatives for the same scene. <b>New Plan from This One</b> copies Plan A so you can try another way without losing the first.</li>
+</ul></div>
+
+
+<div class="keep"><h3 id="c5-selecting-several-things">Selecting several things</h3><ul>
+<li><b>Select</b> on the toolbar, or <kbd>G</kbd>, draws a lasso around pieces.</li>
+<li>Shift-click adds a piece to the selection or takes it out.</li>
+<li><kbd>⌘G</kbd> groups the selection so it moves as one.</li>
+</ul></div>
+
+<div class="keep"><h3 id="c5-clear-moves">Clear Moves</h3><p>Starts the blocking over without rebuilding the set or placing anyone again.</p><div class="where"><b>Where:</b> Menu › This Scene › Clear Moves….</div><figure style="max-width:460px"><div class="fr"><img alt="The Clear moves window: remove every camera move, remove every character move, keep where they end or where they start, and a summary of what will be removed." height="694" src="https://app.thedirectorsnotebook.com/guide/img/clearmoves.jpg" width="760"/></div></figure></div>
+
+
+
+<ul>
+<li>Choose camera moves, character moves, or both.</li>
+<li>For characters, keep where they end or where they start.</li>
+<li>With something selected, you can clear only that.</li>
+<li>Shots, descriptions and storyboards stay. Locked pieces are left alone. One Undo brings everything back.</li>
+</ul>
+</div>
+</section>
+<section class="chapter" id="ch6">
+<div class="opener"><div class="op-top"><span>The Director’s Notebook</span><span>The Guide</span></div>
+<div class="op-num">06</div>
+<h2 class="chap-title">Cameras and Shots</h2>
+<p class="op-lede">Every camera on the plan is a shot on the list. This chapter covers placing cameras, moving them and describing what they see.</p>
+<div class="op-in"><div class="op-lab">In this chapter</div><ol class="op-list" style="--rows:3"><li><a href="#c6-add-a-camera">Add a camera</a></li><li><a href="#c6-the-camera-s-menu">The camera’s menu</a></li><li><a href="#c6-describe-the-shot">Describe the shot</a></li><li><a href="#c6-lenses-on-the-plan">Lenses on the plan</a></li><li><a href="#c6-track-with">Track With</a></li><li><a href="#c6-storyboard-frames">Storyboard frames</a></li></ol></div>
+</div>
+<div class="content">
+<div class="keep"><h3 id="c6-add-a-camera">Add a camera</h3><div class="two" style="grid-template-columns:minmax(0,300px) minmax(0,1fr)"><figure style="margin-top:14px"><div class="fr"><img alt="The Add camera window: New setup, or Another camera on setup 1." height="340" src="https://app.thedirectorsnotebook.com/guide/img/addcam.jpg" width="640"/></div></figure><div>
+<div class="where"><b>Where:</b> Add › Add Camera…, or press <kbd>A</kbd>. The Shot List panel has <b>+ Add camera setup</b>.</div>
+<ul>
+<li><b>New setup</b> asks how many cameras and gives the setup the next number and color.</li>
+<li><b>Another camera on setup…</b> adds a B or C camera to a setup you have.</li>
+</ul>
+<p>A shot is named by its setup and camera, such as <b>1A</b>.</p></div></div></div>
+
+<div class="keep"><h3 id="c6-the-camera-s-menu">The camera’s menu</h3><div class="two" style="grid-template-columns:minmax(0,230px) minmax(0,1fr)"><figure style="margin-top:14px"><div class="fr"><img alt="The menu on Camera 1A: Moves To, Comes From, camera positions, Show Lenses on the Plan, Add a Pan, Follow, Track With, Describe the Shot, Add Version, Add Storyboard Frame, Camera Details, Plays in Time, color, pages, Add a Camera to Setup 1, Lock in Place, Delete." height="921" src="https://app.thedirectorsnotebook.com/guide/img/cammenu.jpg" width="420"/></div></figure><div>
+<ul>
+<li><b>Moves To…</b> gives the camera a move: a dolly, a push, a track. Its stops show as <b>Camera Positions</b>.</li>
+<li><b>Add a Pan</b> (<kbd>R</kbd>) turns the camera on the spot.</li>
+<li><b>Show Lenses on the Plan</b> draws what each lens takes in. See below.</li>
+<li><b>Follow…</b> keeps the camera pointed at a character, or at a spot you tap.</li>
+<li><b>Track With…</b> makes the camera travel with a character. See below.</li>
+<li><b>Describe the Shot…</b> and <b>Add Version…</b> fill in the shot list.</li>
+<li><b>Add Storyboard Frame…</b> attaches a frame to the shot.</li>
+<li><b>Plays in Time</b> sets when the camera move happens.</li>
+<li><b>Camera Details…</b> opens a panel with the shot’s fields, its versions, the camera letter, and the setup’s number and color.</li>
+</ul></div></div></div>
+
+<div class="keep"><h3 id="c6-describe-the-shot">Describe the shot</h3><div class="two" style="grid-template-columns:minmax(0,230px) minmax(0,1fr)"><figure style="margin-top:14px"><div class="fr"><img alt="The Shot Description window: shot and version, Shot Size, Shot Type, Shot Angle, Movement, Description, storyboard, label and version controls." height="842" src="https://app.thedirectorsnotebook.com/guide/img/describe.jpg" width="420"/></div></figure><div>
+<div class="where"><b>Where:</b> the camera’s menu › Describe the Shot…. The same fields are on the Shot List tab.</div>
+<ul>
+<li><b>Shot Size</b>, <b>Shot Type</b>, <b>Shot Angle</b> and <b>Movement</b> are chosen from lists. <b>Description</b> is your own words.</li>
+<li><b>Show Descriptions on the Floor Plan</b> prints them beside each camera.</li>
+<li><b>Add Version…</b> gives one camera position a second shot, such as a tighter size from the same spot. <b>Remove This Version</b> takes one away.</li>
+<li><b>Delete From Shot List</b> removes the shot.</li>
+</ul></div></div></div>
+
+<div class="keep"><h3 id="c6-lenses-on-the-plan">Lenses on the plan</h3><div class="where"><b>Where:</b> the camera’s menu › <b>Show Lenses on the Plan</b>.</div><figure><div class="fr"><img alt="A camera with a shaded wedge fanning out from it across the room, labeled 35mm." height="871" src="https://app.thedirectorsnotebook.com/guide/img/lens.jpg" width="1300"/></div><figcaption>A 35mm lens at the camera’s first position.</figcaption></figure></div>
+
+
+<ul>
+<li>Choose the camera’s lens in the menu: 25, 35, 50, 85, 100, 135, or <b>More…</b></li>
+<li>The wedge shows how wide that lens sees.</li>
+<li><b>Sensor</b> sets the camera’s sensor size, which changes the width of every wedge.</li>
+<li><b>Reach to a Subject or a Spot…</b> stretches the wedge to a character and keeps it on them.</li>
+<li><b>Hide Lenses on the Plan</b> turns the wedges off.</li>
+</ul>
+<div class="keep"><h3 id="c6-track-with">Track With</h3><p>For a camera that travels with a walk: leading, beside or trailing.</p><div class="where"><b>Where:</b> the camera’s menu › <b>Track With…</b> › tap the character.</div><figure><div class="fr"><img alt="The plan with a camera traveling beside a character’s curved walk, and the Track With panel open at the right." height="899" src="https://app.thedirectorsnotebook.com/guide/img/trackwith.jpg" width="1400"/></div><figcaption>The camera has a position for each of the character’s, and keeps her framed.</figcaption></figure></div>
+
+
+
+<ul>
+<li>The camera gets a position for each of the character’s, in the same Time, so they move together.</li>
+<li>Choose the <b>side</b>, <b>how far off</b> in feet, and whether it rides <b>Leading</b>, <b>Beside</b> or <b>Trailing</b>.</li>
+<li><b>Lay dolly track along it</b> puts track under the move in 4 ft sections.</li>
+<li>Change the walk and the camera follows.</li>
+</ul>
+<p class="note"><b>What it will not do:</b> Leading rides ahead and to the side, not straight in front. And once you drag the camera yourself it stops traveling with the character and keeps its positions. Use Track With… again to relink it.</p>
+<div class="keep"><h3 id="c6-storyboard-frames">Storyboard frames</h3><ul>
+<li><b>Add Storyboard Frame…</b> on a camera attaches a picture to that shot.</li>
+<li><b>Frames</b> on the toolbar, or <kbd>B</kbd>, shows or hides them on the plan.</li>
+<li>The folder’s Overview uses each scene’s first and last frames in its <b>Cuts</b> view.</li>
+</ul></div>
+
+</div>
+</section>
+<section class="chapter" id="ch7">
+<div class="opener"><div class="op-top"><span>The Director’s Notebook</span><span>The Guide</span></div>
+<div class="op-num">07</div>
+<h2 class="chap-title">Light and Time of Day</h2>
+<p class="op-lede">Where the sun will be for an exterior, what a night scene looks like, and film lights on the plan.</p>
+<div class="op-in"><div class="op-lab">In this chapter</div><ol class="op-list" style="--rows:2"><li><a href="#c7-sun-shadows">Sun &amp; Shadows</a></li><li><a href="#c7-night-look">Night Look</a></li><li><a href="#c7-lighting-pieces">Lighting pieces</a></li></ol></div>
+</div>
+<div class="content">
+<div class="keep"><h3 id="c7-sun-shadows">Sun &amp; Shadows</h3><p>For exteriors. It shows where the sun is at a place, date and time, the shadows it casts, and how each camera is lit.</p><div class="where"><b>Where:</b> Layers › <b>Sun &amp; Shadows</b>. It is set for one scene at a time.</div><figure><div class="fr"><img alt="A parking lot by day with the Sun and Shadows panel open. The plan shows the sun’s path as a dotted ring with the hours marked, a north arrow, long shadows falling to the right of each car, and a Side-lit tag beside the camera." height="987" src="https://app.thedirectorsnotebook.com/guide/img/sun.jpg" width="1400"/></div><figcaption>Los Angeles on June 20 at 5:30 PM. The dotted ring is the sun’s path through the day.</figcaption></figure></div>
+
+
+
+<ol class="steps">
+<li>Choose the <b>Place</b>. Type a city, tap <b>Use Where I Am</b>, or enter <b>Coordinates…</b></li>
+<li>Check the <b>Date</b>. It comes from the scene’s shoot date in Scene Info, or you can set it here.</li>
+<li>Turn <b>north</b> with the slider until the N arrow on the plan points the right way.</li>
+<li>Drag <b>Time</b> to move the sun.</li>
+</ol>
+<p>The panel then tells you:</p>
+<ul>
+<li>Where the sun is coming from, how high it is, and how long the shadows are.</li>
+<li>Sunrise, high point, sunset and the golden hours.</li>
+<li>How each camera is lit at that time: <b>Front-lit</b>, <b>Side-lit</b>, <b>Looking into the sun</b>, <b>High sun</b> or <b>Sun is down</b>. It also gives the hours when that camera would be front-lit.</li>
+</ul>
+<p><b>Smaller</b> shrinks the panel to a bar with the time on it. <b>Hide Sun</b> turns it off.</p>
+<p class="note"><b>What it will not do:</b> Shadows are drawn from typical heights, such as 9 ft for a wall, and only for what is on the plan. A building or a tree you have not drawn casts no shadow. The place must be on the city list, your own position, or coordinates.</p>
+<div class="keep"><h3 id="c7-night-look">Night Look</h3><p>For night scenes. The plan goes dark and stays lit only where its lights throw.</p><div class="where"><b>Where:</b> Layers › <b>Night Look</b>. It is set for one scene at a time.</div><figure><div class="fr"><img alt="The parking lot at night. The plan is dark except for two round pools under the street lamps and a cone of light from a film light falling on two characters." height="987" src="https://app.thedirectorsnotebook.com/guide/img/night.jpg" width="1400"/></div><figcaption>Two street lamps and one Fresnel.</figcaption></figure></div>
+
+
+
+<div class="two" style="grid-template-columns:minmax(0,300px) minmax(0,1fr)"><figure style="margin-top:14px"><div class="fr"><img alt="The bottom of the Layers panel: Smart Guides on, Sun and Shadows off, Night Look on, and a Darkness slider at 50." height="217" src="https://app.thedirectorsnotebook.com/guide/img/layers-night.jpg" width="520"/></div></figure><div>
+<p>What lights the dark:</p>
+<ul>
+<li>Film lights from Add Lighting, along their beams.</li>
+<li>A pool around a Practical Lamp, Floor Lamp, Street Lamp, Candle, Campfire, Fire or Fireplace.</li>
+<li>A Flashlight.</li>
+<li>Vehicles, once you switch on <b>Headlights On</b> in the vehicle’s menu. The switch appears while Night Look is on.</li>
+</ul>
+<p><b>Darkness</b> sets how dark the rest of the plan is.</p>
+</div></div>
+<ul>
+<li>Turning on Night Look turns Sun &amp; Shadows off, and the other way around.</li>
+<li>The PDF export has a <b>Night Look</b> option, for scenes that have it turned on.</li>
+</ul>
+<div class="keep"><h3 id="c7-lighting-pieces">Lighting pieces</h3><div class="where"><b>Where:</b> Add › Add Lighting…, or press <kbd>L</kbd>.</div><ul>
+<li>The pieces are <b>Fresnel</b>, <b>LED Panel</b>, <b>Softbox</b>, <b>Kino Flo</b>, <b>Practical Lamp</b> and <b>Sun / Window Light</b>.</li>
+<li>The film lights draw a beam on the plan. Turn the light to aim it.</li>
+<li>The light’s menu › <b>Details…</b> has a <b>Beam</b> slider for how far it reaches. All the way down hides the beam.</li>
+<li>Lighting has its own row in Layers, so you can fade it or lock it.</li>
+</ul></div>
+
+
+</div>
+</section>
+<section class="chapter" id="ch8">
+<div class="opener"><div class="op-top"><span>The Director’s Notebook</span><span>The Guide</span></div>
+<div class="op-num">08</div>
+<h2 class="chap-title">The Shot List</h2>
+<p class="op-lede">Every camera on the plan is a row here. This chapter covers the columns, the order, the numbering and changing several shots at once.</p>
+<div class="op-in"><div class="op-lab">In this chapter</div><ol class="op-list" style="--rows:3"><li><a href="#c8-the-shot-list-tab">The Shot List tab</a></li><li><a href="#c8-columns">Columns</a></li><li><a href="#c8-numbering">Numbering</a></li><li><a href="#c8-suggest-shooting-order">Suggest Shooting Order</a></li><li><a href="#c8-changing-several-shots-at-once">Changing several shots at once</a></li><li><a href="#c8-gear-list-and-new-shot">Gear List and New Shot</a></li></ol></div>
+</div>
+<div class="content">
+<div class="keep"><h3 id="c8-the-shot-list-tab">The Shot List tab</h3><div class="where"><b>Where:</b> the Shot List tab. <kbd>V</kbd> switches between the plan and the list. On the Floor Plan, the Shot List panel at the right shows the same shots.</div><figure><div class="fr"><img alt="The Shot List tab for scene 1: three rows, 1A, 2A and 2B, under the headings Storyboard, Shot number, Version, Shot size, Shot type, Shot angle, Movement and Description. The Shot list menu is open at the right." height="592" src="https://app.thedirectorsnotebook.com/guide/img/list.jpg" width="1500"/></div><figcaption>Three shots, with the Shot list menu open.</figcaption></figure></div>
+
+
+<ul>
+<li>Each camera, and each version along its move, is a row.</li>
+<li>Tap a cell to change it. Size, type, angle and movement come from lists. The description is typed.</li>
+<li><b>+ Add frame</b> attaches a storyboard frame to the shot.</li>
+<li>Tap a shot’s number to see that camera on the plan.</li>
+<li>Drag <b>⠿</b> to change the order of the rows.</li>
+</ul>
+<div class="keep"><h3 id="c8-columns">Columns</h3><div class="two" style="grid-template-columns:minmax(0,300px) minmax(0,1fr)"><figure style="margin-top:14px"><div class="fr"><img alt="The Shot list columns window: a list of columns with a tick box and a drag handle on each." height="866" src="https://app.thedirectorsnotebook.com/guide/img/cols.jpg" width="600"/></div></figure><div>
+<div class="where"><b>Where:</b> Shot list ▾ › Columns….</div>
+<ul>
+<li>The list starts with eight: <b>Storyboard</b>, <b>Shot #</b>, <b>Version</b>, <b>Shot size</b>, <b>Shot type</b>, <b>Shot angle</b>, <b>Movement</b> and <b>Description</b>.</li>
+<li>You can turn on <b>Nickname</b>, <b>Lens</b>, <b>Gear</b>, <b>Cast</b>, <b>Props</b>, <b>Est. time</b>, <b>Priority</b>, <b>Flag</b>, <b>VFX</b>, <b>SFX</b>, <b>Status</b> and <b>Notes</b>.</li>
+<li><b>New custom column…</b> adds one of your own.</li>
+<li>Drag <b>⠿</b> to change the order, or drag a heading sideways in the list itself.</li>
+<li>The choice covers every scene in the folder, on all your devices. The PDF shows the same columns in the same order.</li>
+</ul></div></div></div>
+
+<div class="keep"><h3 id="c8-numbering">Numbering</h3><div class="two" style="grid-template-columns:minmax(0,300px) minmax(0,1fr)"><figure style="margin-top:14px"><div class="fr"><img alt="The Shot numbering window: six ways to number shots, three ways to number versions, a renumber automatically tick box and a Start at field." height="873" src="https://app.thedirectorsnotebook.com/guide/img/numbering.jpg" width="620"/></div></figure><div>
+<div class="where"><b>Where:</b> Shot list ▾ › Shot Numbering…, and Renumber….</div>
+<table><thead><tr><th>Style</th><th>What it means</th></tr></thead><tbody>
+<tr><td>1A, 1B, 2A</td><td>Setup number and camera letter</td></tr>
+<tr><td>1-A, 1-B, 2-A</td><td>The same, with a dash</td></tr>
+<tr><td>A-1, B-1, A-2</td><td>Camera letter first</td></tr>
+<tr><td>1, 2, 3</td><td>Every camera gets its own number</td></tr>
+<tr><td>0001, 0002, 0003</td><td>Four-digit shot numbers</td></tr>
+<tr><td>A, B, C</td><td>Every camera gets its own letter</td></tr>
+</tbody></table>
+<ul>
+<li>Versions can be numbered 1, 2, 3, lettered A, B, C, or I, II, III.</li>
+<li><b>Renumber automatically</b> keeps the numbers in step when shots are added, moved or deleted.</li>
+<li><b>Set as default</b> uses your choice for new scenes.</li>
+<li><b>Renumber…</b> numbers the scene’s shots in their current order, top to bottom. It can also reset camera letters to A, B, C in each setup.</li>
+</ul></div></div></div>
+
+<div class="keep"><h3 id="c8-suggest-shooting-order">Suggest Shooting Order</h3><div class="where"><b>Where:</b> Shot list ▾ › Suggest Shooting Order….</div><figure><div class="fr"><img alt="The Suggested shooting order window: a small plan of the cameras, then the setups grouped under Looking toward Maya and Looking toward Dev, with a Turn around line between the groups." height="634" src="https://app.thedirectorsnotebook.com/guide/img/order.jpg" width="1100"/></div></figure></div>
+
+
+<ul>
+<li>It groups setups by which way their cameras look, so one direction is finished before you turn around.</li>
+<li>It tells you how many turnarounds your own order has.</li>
+<li><b>Same direction means within</b> 40°, 60° or 90° sets how strict the grouping is.</li>
+<li><b>Use This Order</b> reorders the list. <b>Keep My Order</b> leaves it alone.</li>
+</ul>
+<p class="note"><b>What it will not do:</b> It reads direction only. It does not know actor availability, daylight or changes.</p>
+<div class="keep"><h3 id="c8-changing-several-shots-at-once">Changing several shots at once</h3><div class="where"><b>Where:</b> <b>Select</b> on the Shot List tab. With cameras selected on the plan, press <kbd>⌘I</kbd>.</div><ol class="steps"><li>Tap <b>Select</b> and tick the shots.</li><li>Tap <b>Change…</b></li><li>Set only what should change, then apply.</li></ol></div>
+
+
+<p>Everything you leave alone stays as it is. A ⌘-click or Shift-click on a row picks it too.</p>
+<div class="keep"><h3 id="c8-gear-list-and-new-shot">Gear List and New Shot</h3><ul>
+<li>Shot list ▾ › <b>Gear List…</b> gathers the gear named in the Gear column, for this scene or the whole folder. <b>Copy List</b> or <b>Save as PDF</b> from there.</li>
+<li>Shot list ▾ › <b>New Shot…</b> adds a camera setup. It asks how many cameras and which color, the same as <b>+ Add camera setup</b> on the plan.</li>
+</ul></div>
+
+</div>
+</section>
+<section class="chapter" id="ch9">
+<div class="opener"><div class="op-top"><span>The Director’s Notebook</span><span>The Guide</span></div>
+<div class="op-num">09</div>
+<h2 class="chap-title">Scouting</h2>
+<p class="op-lede">Scout mode is for a location before it has scenes. You sketch the space, pin photos where you took them and place camera ideas. Then you link the location to its scenes.</p>
+<div class="op-in"><div class="op-lab">In this chapter</div><ol class="op-list" style="--rows:2"><li><a href="#c9-start-a-scout">Start a scout</a></li><li><a href="#c9-the-scout-s-panel">The scout’s panel</a></li><li><a href="#c9-link-scenes">Link scenes</a></li></ol></div>
+</div>
+<div class="content">
+<div class="keep"><h3 id="c9-start-a-scout">Start a scout</h3><div class="where"><b>Where:</b> <b>Scout</b>, beside Prep and Set at the top.</div><ol class="steps"><li>Tap <b>Scout</b>.</li><li>Type the <b>Location name</b>.</li><li>Tap <b>Start the scout</b>.</li></ol></div>
+
+
+<figure><div class="fr"><img alt="Scout mode for a location called Rosa’s Kitchen. The plan shows a room with a counter, an island, a round table, a photo pin and one camera. The panel at the right has the location name, notes, a photo, Sketch and Walls and furniture buttons, one camera idea and a Link scenes button." height="944" src="https://app.thedirectorsnotebook.com/guide/img/scout.jpg" width="1500"/></div><figcaption>A scout under way. The photo here is a stand-in drawing.</figcaption></figure>
+<p>The tabs and the shot list step aside, and the scout’s panel takes the right side. <b>＋ New</b> starts another scout. Other scouts in the folder are listed at the bottom of the panel.</p>
+<div class="keep"><h3 id="c9-the-scout-s-panel">The scout’s panel</h3><table><thead><tr><th>Part</th><th>What it is for</th></tr></thead><tbody>
+<tr><td>Location</td><td>The location’s name. Change it here.</td></tr>
+<tr><td>Notes</td><td>Access, parking, power, sound, light, restrictions.</td></tr>
+<tr><td>Photos</td><td><b>＋ Photo</b> adds a picture and drops a pin on the plan. Drag the pin to where you stood and turn it to face the way the camera pointed. Tap a photo to see it large, give it a caption, or find its pin with <b>Show on plan</b>.</td></tr>
+<tr><td>Sketch and set</td><td><b>Sketch</b> draws the space with the pen. <b>Walls and furniture</b> builds it with the set tools. Both become the location’s set.</td></tr>
+<tr><td>Camera ideas</td><td><b>＋ Camera idea</b> places a camera. Drag it into place, turn it, and tap it to note the lens or framing.</td></tr>
+<tr><td>Scenes at this location</td><td>The scenes you have linked. Tap one to go to it.</td></tr>
+</tbody></table></div>
+
+<div class="keep"><h3 id="c9-link-scenes">Link scenes</h3><div class="where"><b>Where:</b> <b>Link scenes…</b> at the bottom of the scout’s panel.</div><div class="two" style="grid-template-columns:minmax(0,380px) minmax(0,1fr)"><figure style="margin-top:14px"><div class="fr"><img alt="The Link scenes window: the folder’s four scenes with a tick box on each, a note beside those that already have a set, and a tick box to also copy the camera ideas." height="616" src="https://app.thedirectorsnotebook.com/guide/img/scoutlink.jpg" width="760"/></div></figure><div>
+<ul>
+<li>Tick the scenes that happen at this location.</li>
+<li>Linked scenes get the location’s set: walls, furniture and sketches.</li>
+<li>Characters, cameras and notes stay with each scene.</li>
+<li><b>Also copy the camera ideas into them</b> adds the scout’s cameras to each scene as new setups.</li>
+<li>One Undo takes the link back.</li>
+</ul>
+</div></div></div>
+
+
+<p class="note"><b>What to watch for:</b> A scene that already has a set is marked “has its own set (it’ll be replaced)”. Linking it swaps that set for the location’s.</p>
+<p>A linked location works like the locations in Chapter 3. Change the set in one scene and the others follow.</p>
+</div>
+</section>
+<section class="chapter" id="ch10">
+<div class="opener"><div class="op-top"><span>The Director’s Notebook</span><span>The Guide</span></div>
+<div class="op-num">10</div>
+<h2 class="chap-title">On the Day</h2>
+<p class="op-lede">Set mode turns the plan into something to shoot from. Nothing on it can be moved by accident, and the panel beside it walks you through the shots.</p>
+<div class="op-in"><div class="op-lab">In this chapter</div><ol class="op-list" style="--rows:2"><li><a href="#c10-before-you-leave-wi-fi">Before you leave Wi-Fi</a></li><li><a href="#c10-set-mode">Set mode</a></li><li><a href="#c10-working-through-the-shots">Working through the shots</a></li></ol></div>
+</div>
+<div class="content">
+<div class="keep"><h3 id="c10-before-you-leave-wi-fi">Before you leave Wi-Fi</h3><div class="where"><b>Where:</b> Menu › Sync &amp; Backup › <b>Ready for Set Check…</b>. Set mode has a button for it too.</div><div class="two" style="grid-template-columns:minmax(0,380px) minmax(0,1fr)"><figure style="margin-top:14px"><div class="fr"><img alt="The Ready for Set window: a list of checks, each with a tick or an information mark." height="683" src="https://app.thedirectorsnotebook.com/guide/img/ready.jpg" width="760"/></div></figure><div>
+<p>Run it on the iPad. It checks that:</p>
+<ul>
+<li>Every scene and shot in the folder is on this device.</li>
+<li>Every image has downloaded: storyboard frames, plans and photos.</li>
+<li>Everything made here has reached the cloud.</li>
+<li>The app will open without internet.</li>
+<li>On an iPad, the app is on the Home Screen, so the iPad keeps its saved data.</li>
+</ul>
+<p>Anything that fails comes with what to do about it, such as <b>Download them now</b> or <b>Sync now</b>.</p>
+</div></div></div>
+
+
+<div class="keep"><h3 id="c10-set-mode">Set mode</h3><div class="where"><b>Where:</b> <b>Set</b>, beside Prep and Scout at the top.</div><figure><div class="fr"><img alt="Set mode for scene 1. The plan fills the left. The panel at the right shows the scene, a progress bar reading 1 of 3 shot, the current shot 2A with its description, four status buttons, a note, Previous, Blocking and Next buttons, and the list of shots." height="944" src="https://app.thedirectorsnotebook.com/guide/img/set.jpg" width="1500"/></div><figcaption>Shot 2A is up. 1A is marked as shot.</figcaption></figure></div>
+
+
+<p>What changes:</p>
+<ul>
+<li>The tabs and the editing tools are put away. Dragging on the plan only moves the view.</li>
+<li>The toolbar keeps Pages, Frames, Fit and the playback controls.</li>
+<li>The panel at the right takes the place of the shot list.</li>
+</ul>
+<div class="keep"><h3 id="c10-working-through-the-shots">Working through the shots</h3><table><thead><tr><th>Part of the panel</th><th>What it does</th></tr></thead><tbody>
+<tr><td>‹ and › at the top</td><td>Previous and next scene in the folder.</td></tr>
+<tr><td>The progress bar</td><td>How many shots are done, and how many were dropped.</td></tr>
+<tr><td>The shot card</td><td>The current shot: its number, size and type, description and storyboard frames.</td></tr>
+<tr><td>Planned, Ready, Shot, Dropped</td><td>The shot’s status. Tap one to set it.</td></tr>
+<tr><td>The note</td><td>A note for this shot, such as an insert you still need.</td></tr>
+<tr><td>‹ Previous and Next ›</td><td>Step through the shots. The arrow keys do the same.</td></tr>
+<tr><td>▶ Blocking</td><td>Plays the blocking.</td></tr>
+<tr><td>Shots</td><td>Every shot with its status. Tap one to jump to it. Tapping a camera on the plan does the same.</td></tr>
+<tr><td>Strategy</td><td>Appears when the scene has Strategy notes. Tap to open them.</td></tr>
+<tr><td>Checklist…</td><td>The scene’s checklist, with how many items are open.</td></tr>
+</tbody></table></div>
+
+<ul>
+<li>The <b>Status</b> and <b>Notes</b> columns on the Shot List show what you marked here, once you turn them on.</li>
+<li>Tap <b>Prep</b> to go back to editing.</li>
+</ul>
+</div>
+</section>
+<section class="chapter" id="ch11">
+<div class="opener"><div class="op-top"><span>The Director’s Notebook</span><span>The Guide</span></div>
+<div class="op-num">11</div>
+<h2 class="chap-title">Printing and Sharing</h2>
+<p class="op-lede">PDFs for the crew, a picture or a video of the blocking, letterheads, and who is allowed to sync.</p>
+<div class="op-in"><div class="op-lab">In this chapter</div><ol class="op-list" style="--rows:3"><li><a href="#c11-export-pdf">Export PDF</a></li><li><a href="#c11-productions-letterheads">Productions &amp; Letterheads</a></li><li><a href="#c11-a-picture-of-the-page">A picture of the page</a></li><li><a href="#c11-the-blocking-as-a-video">The blocking as a video</a></li><li><a href="#c11-who-can-sync">Who can sync</a></li></ol></div>
+</div>
+<div class="content">
+<div class="keep"><h3 id="c11-export-pdf">Export PDF</h3><div class="two" style="grid-template-columns:minmax(0,380px) minmax(0,1fr)"><figure style="margin-top:14px"><div class="fr"><img alt="The Export PDF window: This scene or The whole folder, a list of what to include with tick boxes, Layout, Letterhead, Header details and Page orientation." height="1112" src="https://app.thedirectorsnotebook.com/guide/img/export.jpg" width="760"/></div></figure><div>
+<div class="where"><b>Where:</b> Menu › Export › Export PDF…, or <kbd>⌘P</kbd>.</div>
+<table><thead><tr><th>Choice</th><th>Options</th></tr></thead><tbody>
+<tr><td>Export</td><td><b>This scene</b> or <b>The whole folder</b>.</td></tr>
+<tr><td>Include</td><td>Scene Breakdown, Shooting Strategy, Floor Plan, Shot List and a Storyboard sheet. Tick any mix, or <b>Select all</b>.</td></tr>
+<tr><td>Layout</td><td><b>Full</b> puts each floor plan and the shot list on their own pages. <b>Compact</b> puts floor plans side by side with the shot list underneath, for the fewest pages.</td></tr>
+<tr><td>Letterhead</td><td>The production whose logo and contact lines go at the top. The choice is remembered for the folder.</td></tr>
+<tr><td>Header details</td><td>Episode, shoot day and shoot date for this scene. They are in Scene Info too.</td></tr>
+<tr><td>Page orientation</td><td><b>Landscape</b> or <b>Portrait</b>.</td></tr>
+</tbody></table></div></div></div>
+
+<p>The parts have options of their own:</p>
+<ul>
+<li><b>Scene Breakdown</b> can include the Questions column.</li>
+<li><b>Floor Plan</b> can frame for the action, show storyboard frames on the plan, add a master page with every move, print each page on its own, and zoom each page to its action. Scenes with Night Look turned on get a Night Look option.</li>
+<li><b>Shot List</b> can include storyboard frames. It prints the same columns as the screen, in the same order.</li>
+<li><b>Storyboard sheet</b> prints every frame large, with its shot.</li>
+</ul>
+<p>Two other PDFs are made elsewhere. The folder’s Overview has its own <b>Export PDF…</b> for the view you are on, and the Gear List has <b>Save as PDF</b>.</p>
+<div class="keep"><h3 id="c11-productions-letterheads">Productions &amp; Letterheads</h3><div class="where"><b>Where:</b> Menu › Export › Productions &amp; Letterheads…, or <b>Set up…</b> in the Export PDF window.</div><ul>
+<li>A production holds the logo, a note and the contact lines for the top of every exported page.</li>
+<li>Give each production its folders, and their scenes export with its letterhead.</li>
+</ul></div>
+
+
+<div class="keep"><h3 id="c11-a-picture-of-the-page">A picture of the page</h3><p>Menu › Export › <b>Download This Page as an Image</b> saves the plan you are looking at as a picture.</p></div>
+
+<div class="keep"><h3 id="c11-the-blocking-as-a-video">The blocking as a video</h3><div class="where"><b>Where:</b> Menu › Export › Save the Blocking as a Video…, or <b>Save as Video…</b> in a Time’s menu.</div><ul>
+<li>It records the page you are on, playing in real time. Keep the app open until it is done.</li>
+<li>The video is 1280 × 720, with the scene’s name and the current Time across the top.</li>
+<li>It is saved as MP4 where the browser can make one, and WebM where it cannot.</li>
+</ul></div>
+
+
+<p class="note"><b>What it will not do:</b> It needs something that moves. Give a character or a camera a second position and set its Time first.</p>
+<div class="keep"><h3 id="c11-who-can-sync">Who can sync</h3><div class="where"><b>Where:</b> tap the status at the top right › <b>Approved people…</b></div><ul>
+<li>With the lock on, only you and the people on the list can sync.</li>
+<li>Add each person’s exact email. They tap <b>Create account</b> in the app with that email.</li>
+<li>Anyone else can still use the app. Their work stays on their own device.</li>
+<li>Removing someone stops their syncing. Their scenes stay on their devices.</li>
+</ul></div>
+
+
+<p class="note"><b>What it will not do:</b> Approving someone does not show them your scenes. Each account syncs its own work to its own devices. To hand someone your plans, send them the PDFs.</p>
+</div>
+</section>
+<section class="chapter" id="ch12">
+<div class="opener"><div class="op-top"><span>The Director’s Notebook</span><span>The Guide</span></div>
+<div class="op-num">12</div>
+<h2 class="chap-title">Reference</h2>
+<p class="op-lede">Where everything is, what travels between your devices, the limits worth knowing, and what is new.</p>
+<div class="op-in"><div class="op-lab">In this chapter</div><ol class="op-list" style="--rows:2"><li><a href="#c12-where-is-it">Where is it?</a></li><li><a href="#c12-what-syncs">What syncs</a></li><li><a href="#c12-known-limits">Known limits</a></li><li><a href="#c12-what-s-new">What’s new</a></li></ol></div>
+</div>
+<div class="content">
+<div class="keep"><h3 id="c12-where-is-it">Where is it?</h3><table><thead><tr><th>To find</th><th>Look in</th><th>Chapter</th></tr></thead><tbody>
+<tr><td>Add a character, extras</td><td>Add › Add Character…, Add Extras…</td><td><a href="#ch5">5</a></td></tr><tr><td>Add a camera</td><td>Add › Add Camera…</td><td><a href="#ch6">6</a></td></tr><tr><td>Add a prop</td><td>Add › Add Prop…</td><td><a href="#ch4">4</a></td></tr><tr><td>Add walls, doors and windows</td><td>Add › Add Set…</td><td><a href="#ch3">3</a></td></tr><tr><td>Add a light</td><td>Add › Add Lighting…</td><td><a href="#ch7">7</a></td></tr><tr><td>Add a note or an arrow</td><td>Add › Add Annotation…</td><td><a href="#ch4">4</a></td></tr><tr><td>Approved people</td><td>The status at the top right</td><td><a href="#ch11">11</a></td></tr><tr><td>Background image</td><td>Add › Background Image…</td><td><a href="#ch3">3</a></td></tr><tr><td>Back up and restore</td><td>Menu › Sync &amp; Backup</td><td><a href="#ch1">1</a></td></tr><tr><td>Blocking as a video</td><td>Menu › Export</td><td><a href="#ch11">11</a></td></tr><tr><td>Breakdown and Strategy import</td><td>Menu › Import</td><td><a href="#ch2">2</a></td></tr><tr><td>Checklist</td><td>Menu › This Scene</td><td><a href="#ch2">2</a></td></tr><tr><td>Clear Moves</td><td>Menu › This Scene</td><td><a href="#ch5">5</a></td></tr><tr><td>Columns in the shot list</td><td>Shot list ▾ › Columns…</td><td><a href="#ch8">8</a></td></tr><tr><td>Describe a shot</td><td>The camera’s menu, or the Shot List tab</td><td><a href="#ch6">6</a></td></tr><tr><td>Draw a Building</td><td>Add › Add Set…</td><td><a href="#ch3">3</a></td></tr><tr><td>Draw the Walk</td><td>A character’s menu › Moves To…</td><td><a href="#ch5">5</a></td></tr><tr><td>Earlier versions</td><td>Menu › Sync &amp; Backup</td><td><a href="#ch1">1</a></td></tr><tr><td>Export PDF</td><td>Menu › Export</td><td><a href="#ch11">11</a></td></tr><tr><td>Gear list</td><td>Shot list ▾</td><td><a href="#ch8">8</a></td></tr><tr><td>Keyboard shortcuts</td><td>Press ?, or Menu › Keyboard Shortcuts</td><td><a href="#ch1">1</a></td></tr><tr><td>Layers</td><td>The toolbar</td><td><a href="#ch3">3</a></td></tr><tr><td>Lenses on the plan</td><td>The camera’s menu</td><td><a href="#ch6">6</a></td></tr><tr><td>Letterheads</td><td>Menu › Export</td><td><a href="#ch11">11</a></td></tr><tr><td>Locations</td><td>Menu › This Scene</td><td><a href="#ch3">3</a></td></tr><tr><td>Measure a distance</td><td>Add › Measure a Distance</td><td><a href="#ch3">3</a></td></tr><tr><td>My Props</td><td>The menu for several selected pieces</td><td><a href="#ch4">4</a></td></tr><tr><td>Night Look</td><td>Layers</td><td><a href="#ch7">7</a></td></tr><tr><td>Overhead from an Address</td><td>Add › Add Set…</td><td><a href="#ch3">3</a></td></tr><tr><td>Overview &amp; Questions</td><td>Menu, on the line that names your folder</td><td><a href="#ch2">2</a></td></tr><tr><td>Pages and blocking plans</td><td>The Pages button on the toolbar</td><td><a href="#ch5">5</a></td></tr><tr><td>Ready for Set check</td><td>Menu › Sync &amp; Backup</td><td><a href="#ch10">10</a></td></tr><tr><td>Scene info</td><td>Menu › This Scene</td><td><a href="#ch2">2</a></td></tr><tr><td>Scout a location</td><td>Scout, at the top</td><td><a href="#ch9">9</a></td></tr><tr><td>Script import</td><td>Menu › Import</td><td><a href="#ch2">2</a></td></tr><tr><td>Set from a Director’s Plan</td><td>Add › Add Set…</td><td><a href="#ch3">3</a></td></tr><tr><td>Set mode</td><td>Set, at the top</td><td><a href="#ch10">10</a></td></tr><tr><td>Shooting order</td><td>Shot list ▾</td><td><a href="#ch8">8</a></td></tr><tr><td>Shot numbering</td><td>Shot list ▾</td><td><a href="#ch8">8</a></td></tr><tr><td>Speeds and Times</td><td>The animation view on the toolbar</td><td><a href="#ch5">5</a></td></tr><tr><td>Storyboard frames</td><td>The camera’s menu, or + Add frame in the Shot List</td><td><a href="#ch6">6</a></td></tr><tr><td>Sun &amp; Shadows</td><td>Layers</td><td><a href="#ch7">7</a></td></tr><tr><td>Templates</td><td>Menu › This Scene</td><td><a href="#ch3">3</a></td></tr><tr><td>Track With</td><td>The camera’s menu</td><td><a href="#ch6">6</a></td></tr>
+</tbody></table></div>
+
+<p>The main menu is laid out in <a href="#ch1">Chapter 1</a>, with the full list of keyboard shortcuts. This guide opens from Menu › <b>The Guide</b>.</p>
+<div class="keep"><h3 id="c12-what-syncs">What syncs</h3><p>Once you sign in, these travel to every device on your account:</p><ul>
+<li>Scenes, with their sets, blocking, cameras and shots.</li>
+<li>The writing on the Breakdown and Strategy tabs.</li>
+<li>Images: storyboard frames, plans and scout photos.</li>
+<li>Folders, locations and scouts.</li>
+<li>My Props, and your choice of shot list columns.</li>
+</ul></div>
+
+
+<p>These stay on the device where you made them:</p>
+<ul>
+<li>Earlier Versions, and the copies made with Save a Version Now.</li>
+<li>Anything too large to sync, which the Ready for Set check names. A very long sketch is the usual cause.</li>
+</ul>
+<p>When two devices have both been working, new material from both is kept. Only when the same scene was changed on both does the newest change win.</p>
+<div class="keep"><h3 id="c12-known-limits">Known limits</h3><table><thead><tr><th>Feature</th><th>The limit</th></tr></thead><tbody>
+<tr><td>Import a Script</td><td>Reads the text inside a PDF. A scanned script has no text to read.</td></tr>
+<tr><td>Import from Word</td><td>Cannot open the older .doc format. Save as .docx first.</td></tr>
+<tr><td>Draw a Building</td><td>Roofs are flat or gable only.</td></tr>
+<tr><td>Overhead from an Address</td><td>Knows outlines, not what is on a lot. Tested with New Jersey addresses.</td></tr>
+<tr><td>Set from a Director’s Plan</td><td>Reads square-on walls only. Does not read which way a piece faces, and misses some doors and chairs.</td></tr>
+<tr><td>Track With</td><td>Leading rides ahead and to the side. Dragging the camera yourself unlinks it.</td></tr>
+<tr><td>Sun &amp; Shadows</td><td>Shadows use typical heights, and only for what is on the plan.</td></tr>
+<tr><td>Suggest Shooting Order</td><td>Reads camera direction only.</td></tr>
+<tr><td>The blocking as a video</td><td>Needs at least one move with a Time set.</td></tr>
+<tr><td>Earlier Versions</td><td>Kept on one device. They do not sync.</td></tr>
+<tr><td>Approved people</td><td>Lets someone sync their own work. It does not share yours.</td></tr>
+</tbody></table></div>
+
+<div class="keep"><h3 id="c12-what-s-new">What’s new</h3><p>Added in November 2026:</p><ul>
+<li><b>Clear Moves</b> starts the blocking over and keeps the set. <a href="#ch5">Chapter 5</a>.</li>
+<li><b>Draw the Walk</b> turns a freehand line into a move. <a href="#ch5">Chapter 5</a>.</li>
+<li><b>Draw a Building</b> makes a building with walls and a roof from its outline. <a href="#ch3">Chapter 3</a>.</li>
+<li><b>Track With</b> makes a camera travel with a character. <a href="#ch6">Chapter 6</a>.</li>
+<li><b>Set from a Director’s Plan</b> reads an art department plan into walls, doors and furniture. <a href="#ch3">Chapter 3</a>.</li>
+<li>New pieces: Washer, Dryer, Vending Machine, Cell Bunk, L-Shaped Counter and the Plain Shape. <a href="#ch4">Chapter 4</a>.</li>
+<li>Eight built-in templates were reworked, among them Parking Lot and Street Corner. Copies you have not edited update by themselves. <a href="#ch3">Chapter 3</a>.</li>
+</ul></div>
+
+
+</div>
+</section>
+<footer class="end"><span>The Director’s Notebook · The Guide · Version of November 23, 2026. The project in the pictures, “The Long Way Home”, is invented for this guide.</span><span><a href="#contents">Contents</a> · <a href="https://app.thedirectorsnotebook.com/guide/The-Directors-Notebook-Guide.pdf">Download PDF</a> · <a href="https://app.thedirectorsnotebook.com/guide/../">Back to the app</a></span></footer>
+<dialog class="gs" id="gs" aria-label="Search the guide"><div class="q"><input id="gsQ" type="text" inputmode="search" enterkeyhint="search" placeholder="Search the guide" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Search the guide" aria-controls="gsR"><button class="x" type="button" id="gsX">Close</button></div><div class="res" id="gsR" role="listbox" aria-label="Results"></div><div class="ft"><span id="gsN"></span><span class="k">↑ ↓ to move · Enter to open · Esc to close</span></div></dialog>
+<script>(()=>{
+const d=document.getElementById('gs'),q=document.getElementById('gsQ'),R=document.getElementById('gsR'),N=document.getElementById('gsN'),open=document.getElementById('gsOpen');
+if(!d||!d.showModal){if(open)open.hidden=true;return;}
+/* the same letters whatever the typing: no accents, straight quotes, one kind of space */
+const norm=t=>t.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/[‘’]/g,"'").replace(/[“”]/g,'"').replace(/[›·]/g,' ');
+const qn=s=>norm(s).replace(/\s+/g,' ').trim();
+/* an element's words, with a space wherever a new block, cell or list item starts */
+const INL=/^(B|I|EM|STRONG|A|SPAN|KBD|CODE|SUB|SUP|MARK|U|SMALL)$/;
+const words=el=>{let o='';for(const n of el.childNodes){if(n.nodeType===3)o+=n.nodeValue;else if(n.nodeType===1){if(n.classList.contains('mk'))continue;if(n.tagName==='IMG'){o+=' '+(n.alt||'')+' ';continue;}const w=words(n);o+=INL.test(n.tagName)?w:' '+w+' ';}}return o;};
+const esc=t=>t.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+/* one entry per section: its heading, its chapter, and every word under it up to the next heading */
+let I=null;
+function index(){I=[];
+ document.querySelectorAll('section.chapter').forEach(ch=>{const num=(ch.querySelector('.op-num')||{}).textContent||'',ct=(ch.querySelector('.chap-title')||{}).textContent||'';let cur=null;
+  const body=ch.querySelector('.content');if(!body)return;
+  const walk=el=>{const h=el.matches&&el.matches('h3[id]')?el:null;
+   if(h){cur={id:h.id,t:h.textContent.trim(),c:(num.trim()+' · '+ct.trim()),x:''};I.push(cur);return;}
+   if(el.querySelector&&el.querySelector('h3[id]')){[...el.children].forEach(walk);return;}
+   if(!cur)return;
+   cur.x+=' '+(el.tagName==='IMG'?(el.alt||''):words(el));};
+  [...body.children].forEach(walk);});
+ for(const e of I){e.x=e.x.replace(/\s+/g,' ').replace(/ ([,.;:)])(?= |$)/g,'$1').trim();e.nt=norm(e.t);e.nc=norm(e.c);e.nx=norm(e.x);}
+}
+function find(s){const n=qn(s);if(!n)return[];const W=n.split(' ').filter(Boolean),out=[];
+ I.forEach((e,i)=>{let sc=0;for(const w of W){const a=e.nt.includes(w),b=e.nx.includes(w),c=e.nc.includes(w);if(!a&&!b&&!c)return;sc+=a?(e.nt.split(' ').includes(w)?30:22):0;sc+=c?4:0;if(b)sc+=Math.min(6,e.nx.split(w).length-1);}
+  if(e.nt.includes(n))sc+=60;if(e.nt===n)sc+=60;if(W.length>1&&e.nx.includes(n))sc+=18;out.push({e,sc,i});});
+ return out.sort((a,b)=>b.sc-a.sc||a.i-b.i).slice(0,12);}
+/* a line of the section around the first word found, with the words marked */
+function snip(e,s){const n=qn(s),W=n.split(' ').filter(Boolean),x=e.x,nx=e.nx;let at=nx.indexOf(n);if(at<0)for(const w of W){const k=nx.indexOf(w);if(k>=0&&(at<0||k<at))at=k;}
+ if(nx.length!==x.length||at<0)return esc(x.slice(0,150))+(x.length>150?'…':'');
+ let a=Math.max(0,at-50);if(a>0){const sp=x.indexOf(' ',a);if(sp>=0&&sp<at)a=sp+1;}
+ let z=Math.min(x.length,a+170);if(z<x.length){const sp=x.lastIndexOf(' ',z);if(sp>at)z=sp;}
+ return (a?'…':'')+mark(x.slice(a,z),W)+(z<x.length?'…':'');}
+function mark(t,W){const nt=norm(t);if(nt.length!==t.length)return esc(t);const on=new Array(t.length).fill(0);for(const w of W){let k=nt.indexOf(w);while(k>=0){for(let j=k;j<k+w.length;j++)on[j]=1;k=nt.indexOf(w,k+w.length);}}
+ let o='',m=0;for(let i=0;i<t.length;i++){if(on[i]&&!m){o+='<mark>';m=1;}if(!on[i]&&m){o+='</mark>';m=0;}o+=esc(t[i]);}return o+(m?'</mark>':'');}
+let sel=0,list=[];
+function show(){const s=q.value;list=find(s);sel=0;
+ if(!s.trim()){R.innerHTML='<div class="msg">Type a feature, a menu name or a word. Try “Track With”, “night” or “export”.</div>';N.textContent='';return;}
+ if(!list.length){R.innerHTML='<div class="msg">Nothing in the guide matches “'+esc(s.trim())+'”.</div>';N.textContent='';return;}
+ const W=qn(s).split(' ').filter(Boolean);
+ R.innerHTML=list.map((r,i)=>'<button type="button" class="r'+(i?'':' on')+'" role="option" data-i="'+i+'"><span class="c">'+esc(r.e.c)+'</span><b>'+mark(r.e.t,W)+'</b><span class="s">'+snip(r.e,s)+'</span></button>').join('');
+ N.textContent=list.length+(list.length===1?' section':' sections');R.scrollTop=0;}
+function move(k){if(!list.length)return;sel=(sel+k+list.length)%list.length;[...R.children].forEach((x,i)=>x.classList.toggle('on',i===sel));const el=R.children[sel];if(el&&el.scrollIntoView)el.scrollIntoView({block:'nearest'});}
+function go(i){const r=list[i];if(!r)return;d.close();const h=document.getElementById(r.e.id);if(!h)return;
+ history.pushState(null,'','#'+r.e.id);h.tabIndex=-1;h.focus({preventScroll:true});h.scrollIntoView();h.classList.remove('hit');void h.offsetWidth;h.classList.add('hit');}
+function start(){if(!I)index();if(d.open)return;d.showModal();q.value='';show();q.focus();}
+open.onclick=start;document.getElementById('gsX').onclick=()=>d.close();
+q.addEventListener('input',show);
+q.addEventListener('keydown',e=>{if(e.key==='ArrowDown'){e.preventDefault();move(1);}else if(e.key==='ArrowUp'){e.preventDefault();move(-1);}else if(e.key==='Enter'){e.preventDefault();go(sel);}});
+R.addEventListener('click',e=>{const b=e.target.closest('.r');if(b)go(+b.dataset.i);});
+d.addEventListener('click',e=>{if(e.target===d)d.close();});
+addEventListener('keydown',e=>{const typing=/^(INPUT|TEXTAREA|SELECT)$/.test((e.target||{}).tagName||'');
+ if((e.key==='k'||e.key==='K')&&(e.metaKey||e.ctrlKey)){e.preventDefault();start();}else if(e.key==='/'&&!typing&&!e.metaKey&&!e.ctrlKey&&!e.altKey){e.preventDefault();start();}});
+})();</script>
+</body></html>
