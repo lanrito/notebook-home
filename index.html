@@ -70,20 +70,21 @@ section{padding:96px 0}
 .maker .h2{max-width:820px}.maker .lede{max-width:700px;font-size:20px;line-height:1.55}
 .sig{margin-top:30px;display:flex;flex-direction:column;gap:2px}.sig b{color:#fff;font-size:19px;letter-spacing:-.01em}.sig span{font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;opacity:.55}
 .maker .insp{margin-top:30px;max-width:700px;font-size:16.5px;line-height:1.55;color:rgba(252,247,233,.8)}.maker .insp a{color:#fff;font-weight:600;white-space:nowrap}
-.maker .mail{margin-top:26px;padding-top:22px;border-top:1px solid rgba(252,247,233,.18);font-size:16px;color:rgba(252,247,233,.8);max-width:700px}.maker .mail a{color:#fff;font-weight:600}
+.maker .mail{margin-top:26px;padding-top:22px;border-top:1px solid rgba(252,247,233,.18);font-size:16px;color:rgba(252,247,233,.8);max-width:700px}.maker .mail a{color:#fff;font-weight:600}.maker .mail b{display:block;font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--cream);opacity:.55;margin-bottom:6px}
 footer{padding:36px 0 56px;color:var(--mut);font-size:14px;border-top:1px solid var(--line)}
 footer .w{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}footer a{color:var(--accent);text-decoration:none;font-weight:600}
+@media (max-width:980px){.bar a.opt{display:none}}
 @media (max-width:860px){.tabs,.two,.notes,.guide .in{grid-template-columns:1fr}.also ul{grid-template-columns:1fr 1fr}.tiles{grid-template-columns:1fr 1fr}.mode{grid-template-columns:1fr;gap:20px}.book{margin:0 auto}.shot{margin-bottom:-90px}.after-hero{padding-top:140px}section{padding:72px 0}}
 @media (max-width:560px){.tiles,.also ul{grid-template-columns:1fr}.bar a.l{display:none}.w{padding:0 20px}body{font-size:16.5px}}
 </style></head><body>
-<nav class="bar"><div class="w"><a class="brand" href="#top"><img src="img/logo.png" width="512" height="512" alt="">The Director’s Notebook</a><a class="l" href="#tabs">The four tabs</a><a class="l" href="#get">Get it</a><a class="l" href="https://app.thedirectorsnotebook.com/guide/">The Guide</a><a class="btn s" href="https://app.thedirectorsnotebook.com/">Open the app</a></div></nav>
+<nav class="bar"><div class="w"><a class="brand" href="#top"><img src="img/logo.png" width="512" height="512" alt="">The Director’s Notebook</a><a class="l opt" href="#tabs">The four tabs</a><a class="l" href="#maker">Who made it</a><a class="l opt" href="#get">Get it</a><a class="l" href="https://app.thedirectorsnotebook.com/guide/">The Guide</a><a class="l" href="#contact">Contact</a><a class="btn s" href="https://app.thedirectorsnotebook.com/">Open the app</a></div></nav>
 <header class="hero" id="top"><div class="w">
 <img class="logo" src="img/logo.png" width="512" height="512" alt="The Director’s Notebook logo: a cream letter D shaped like a spiral-bound notebook.">
 <h1>The Director’s Notebook</h1>
 <p class="sub">A scene’s breakdown, strategy, floor plan and shot list in one place.</p>
 <div class="cta"><a class="btn" href="https://app.thedirectorsnotebook.com/">Open the app</a><a class="btn o" href="https://app.thedirectorsnotebook.com/guide/">Read the guide</a></div>
 <p class="fine">Free · For the Mac and the iPad · Works without a connection</p>
-<p class="upd"><a href="https://app.thedirectorsnotebook.com/guide/#c12-what-s-new">Updated November 2026 · What’s new</a></p>
+<p class="upd"><a href="#maker">Made by director Lanre Olabisi</a> &nbsp;·&nbsp; <a href="https://app.thedirectorsnotebook.com/guide/#c12-what-s-new">Updated November 2026 · What’s new</a></p>
 <div class="shot"><video id="film" autoplay muted loop playsinline preload="metadata" poster="media/film-poster.jpg" width="1920" height="1080" aria-label="A short silent film of the app: a character’s walk is drawn on the floor plan, a camera is added, the scene plays, and the shot list shows the shots."><source src="media/film.mp4" type="video/mp4"></video><button class="vp" type="button">Pause</button></div>
 </div></header>
 <section class="after-hero" id="tabs"><div class="w">
@@ -110,7 +111,7 @@ footer .w{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}foo
 <p class="lede">The Director’s Notebook was built by Lanre Olabisi, a working television director, for his own prep. A scene’s breakdown, strategy, floor plan and shot list usually live in four different places, and a change in one never reaches the others. Here they are one notebook: a camera on the plan is a shot on the list, and all of it keeps working where there is no signal.</p>
 <p class="sig"><b>Lanre Olabisi</b><span>Director</span></p>
 <p class="insp">Inspired by <i>The Godfather Notebook</i>, the binder Francis Ford Coppola built from Mario Puzo’s novel and directed the film from. <a href="https://www.youtube.com/watch?v=awce_j2myQw" target="_blank" rel="noopener">Watch Coppola go through it</a> · <a href="https://www.amazon.com/dp/B01MRRWX5J" target="_blank" rel="noopener">Buy the book</a></p>
-<p class="mail">A question, or something not working? Write to <a href="mailto:info@thedirectorsnotebook.com">info@thedirectorsnotebook.com</a>.</p>
+<p class="mail" id="contact"><b>Contact</b>A question, or something not working? Write to <a href="mailto:info@thedirectorsnotebook.com">info@thedirectorsnotebook.com</a>.</p>
 </div></section>
 <section class="get" id="get"><div class="w">
 <div class="eyebrow">Get it</div>
