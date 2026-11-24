@@ -62,7 +62,13 @@ tbody tr{border-top:1px solid #e4e0d5}td:first-child{font-weight:800;white-space
 .how ol{margin:12px 0 0;padding-left:22px;color:#3a3a3e}
 .notes{display:flex;flex-wrap:wrap;gap:24px 56px;margin-top:56px;padding-top:26px;border-top:1px solid var(--line)}
 .notes p{flex:1 1 320px;min-width:0;font-size:16px;color:#3a3a3e}.notes b{display:block;margin-bottom:4px}.notes a{font-weight:700}
-footer{padding:26px 0 44px;color:rgba(252,247,233,.72);font-size:14px}footer .w{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px 24px}
+.contact{padding:110px 0 96px}.contact .in{display:flex;flex-wrap:wrap;gap:44px 72px;align-items:flex-start}
+.contact .a{flex:1 1 400px;min-width:0}.contact .b{flex:1 1 420px;min-width:0}
+.contact h2{margin-top:12px;font-size:clamp(34px,4.6vw,58px);line-height:1;letter-spacing:-.04em;color:#fff}
+.contact .write{margin-top:22px;font-size:21px;line-height:1.4;color:rgba(252,247,233,.9)}.contact .write a{color:#fff;font-weight:700}
+.route{display:block;text-decoration:none;border-top:1px solid var(--rule);padding:18px 0}.route:last-child{border-bottom:1px solid var(--rule)}
+.route b{display:block;font-size:20px;letter-spacing:-.02em;color:#fff}.route span{display:block;margin-top:2px;color:rgba(252,247,233,.8);font-size:16px}
+footer{border-top:1px solid rgba(252,247,233,.18);padding:26px 0 44px;color:rgba(252,247,233,.72);font-size:14px}footer .w{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px 24px}
 footer a{font-weight:700;color:#fff;text-decoration:none}
 :focus-visible{outline:2px solid #8fb2ff;outline-offset:3px}
 @media (max-width:700px){.tbl{overflow:visible}table{min-width:0}thead{display:none}tbody tr{display:grid;grid-template-columns:62px 1fr;padding:14px 16px}tbody tr:first-child{border-top:0}td{padding:0}td:nth-child(3){grid-column:2;margin-top:3px;font-size:15.5px}
@@ -72,7 +78,7 @@ footer a{font-weight:700;color:#fff;text-decoration:none}
 </style></head><body>
 
 <header class="dark hero" id="top"><div class="w">
-<nav class="top" aria-label="Main"><a class="brand" href="#top"><img src="/img/logo.png" width="512" height="512" alt="">The Director’s Notebook</a><a class="l opt" href="#modes">Prep · Scout · Set</a><a class="l" href="#maker">Who made it</a><a class="l" href="https://app.thedirectorsnotebook.com/guide/">The Guide</a><a class="l" href="mailto:info@thedirectorsnotebook.com">Contact</a><a class="btn s" href="https://app.thedirectorsnotebook.com/">Open the app</a></nav>
+<nav class="top" aria-label="Main"><a class="brand" href="#top"><img src="/img/logo.png" width="512" height="512" alt="">The Director’s Notebook</a><a class="l opt" href="#modes">Prep · Scout · Set</a><a class="l" href="#maker">Who made it</a><a class="l" href="https://app.thedirectorsnotebook.com/guide/">The Guide</a><a class="l" href="#contact">Contact</a><a class="btn s" href="https://app.thedirectorsnotebook.com/">Open the app</a></nav>
 <div class="head">
 <h1>The Director’s<br>Notebook</h1>
 <div class="side"><p class="sub">A scene’s breakdown, strategy, floor plan and shot list in one place.</p>
@@ -129,7 +135,19 @@ footer a{font-weight:700;color:#fff;text-decoration:none}
 </div>
 <div class="notes">
 <p><b class="caps">Offline</b>Once it has been opened on a device it keeps working without a connection. There is no Save button; work is saved as you go.</p>
-<p><b class="caps">Sync</b>Signing in keeps the same scenes on every device. For now, sync is by invitation: write to <a href="mailto:info@thedirectorsnotebook.com">info@thedirectorsnotebook.com</a> and ask to be added. Without it everything still works and stays on the one device.</p>
+<p><b class="caps">Sync</b>Signing in keeps the same scenes on every device. For now, sync is by invitation: <a href="#contact">write and ask to be added</a>. Without it everything still works and stays on the one device.</p>
+</div>
+</div></section>
+
+<section class="dark contact" id="contact"><div class="w in">
+<div class="a"><div class="caps">Contact</div>
+<h2>A question, or something not working?</h2>
+<p class="write">Write to <a href="mailto:info@thedirectorsnotebook.com">info@thedirectorsnotebook.com</a>.</p></div>
+<div class="b">
+<a class="route" href="mailto:info@thedirectorsnotebook.com?subject=Prop%20request"><b>Request a prop</b><span>A piece a scene needs that is not in the library yet.</span></a>
+<a class="route" href="mailto:info@thedirectorsnotebook.com?subject=Something%20is%20not%20working"><b>Report a problem</b><span>Something that is not working as it should.</span></a>
+<a class="route" href="mailto:info@thedirectorsnotebook.com?subject=An%20idea"><b>Suggest a feature</b><span>An idea from your own prep.</span></a>
+<a class="route" href="mailto:info@thedirectorsnotebook.com?subject=Sync%20access"><b>Ask for sync</b><span>To keep the same scenes on every device.</span></a>
 </div>
 </div></section>
 
