@@ -86,6 +86,15 @@ tbody tr{border-top:1px solid #e4e0d5}td:first-child{font-weight:800;white-space
 .bio p{margin-top:10px;font-size:15.5px;line-height:1.6;color:rgba(252,247,233,.82)}
 .note{font-size:22px;line-height:1.5;color:rgba(252,247,233,.94)}.note.k{margin-top:22px;color:#fff;font-weight:600}
 .old{margin-top:36px;padding-top:28px;border-top:1px solid var(--rule);font-size:18px;line-height:1.6;color:rgba(252,247,233,.86)}
+.yt{display:block;position:relative;width:100%;aspect-ratio:16/9;margin:26px 0 0;border-radius:10px;border:1px solid rgba(252,247,233,.22);background:#000;color:var(--cream);overflow:hidden;text-decoration:none}
+.yt img{position:absolute;right:0;top:0;height:100%;width:75%;object-fit:cover;display:block}
+.yt:before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,#000 0%,#000 24%,rgba(0,0,0,.72) 40%,rgba(0,0,0,0) 62%),linear-gradient(0deg,rgba(0,0,0,.78) 0%,rgba(0,0,0,0) 42%)}
+.yt .ytp{position:absolute;z-index:2;left:50%;top:50%;width:clamp(54px,7vw,84px);height:clamp(54px,7vw,84px);transform:translate(-50%,-50%);border-radius:50%;border:1.5px solid rgba(252,247,233,.85);background:rgba(0,0,0,.38);display:flex;align-items:center;justify-content:center;padding-left:4px;transition:background .2s,color .2s}
+.yt:hover .ytp,.yt:focus-visible .ytp{background:var(--cream);color:#000}
+.yt .ytc{position:absolute;z-index:2;left:clamp(14px,3vw,28px);bottom:clamp(12px,2.6vw,24px);right:16px;display:block}
+.yt .ytc .caps{color:rgba(252,247,233,.8);font-size:clamp(9.5px,1vw,11.5px)}.yt .ytc b{display:block;margin-top:5px;font-size:clamp(15px,2.1vw,26px);font-weight:700;letter-spacing:-.015em;color:#fff;line-height:1.15}
+.yt.on:before{display:none}.yt iframe{position:absolute;inset:0;width:100%;height:100%;border:0;z-index:3}
+.ytn{margin:8px 0 0;font-size:12.5px;color:var(--dk)}
 .links{margin-top:22px;font-size:15.5px}.links a{font-weight:700;color:#fff}.links span{color:var(--dk)}
 .get{display:flex;flex-wrap:wrap;gap:40px 56px;align-items:flex-start}
 .get .a{flex:1 1 100%;min-width:0;display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:24px 40px}.get .a>div{flex:1 1 420px;min-width:0}.get .a h2{max-width:16ch}.get .a p{margin:0 0 6px!important}.get h2{margin-top:12px;font-size:clamp(34px,4.6vw,58px);line-height:1;letter-spacing:-.04em}
@@ -175,7 +184,9 @@ footer a{font-weight:700;color:#fff;text-decoration:none}footer .w.pv{display:bl
 <p class="note">I direct television and film. Every scene I prep ends up in four places: the breakdown, how I mean to shoot it, the floor plan and the shot list. Change one and the others go stale. I wanted one notebook where a camera on the plan is already a shot on the list. So I made it.</p>
 <p class="note k">It was built during real prep, one episode at a time. Everything in it is there because a scene needed it.</p>
 <p class="old">The idea is an old one. Before he shot <i>The Godfather</i>, Francis Ford Coppola cut up Mario Puzo’s novel, pasted the pages into a binder and wrote his plan for every scene around them. He has said he could have made the film from that binder alone. That is the goal I have whenever I direct something. I want to be able to direct the show from the notebook alone.</p>
-<p class="links"><a href="https://www.youtube.com/watch?v=awce_j2myQw" target="_blank" rel="noopener">Watch Coppola discuss The Godfather Notebook</a> <span>·</span> <a href="https://www.amazon.com/dp/B01MRRWX5J" target="_blank" rel="noopener">Buy Francis Ford Coppola’s Godfather Notebook</a></p>
+<a class="yt" id="yt" href="https://www.youtube.com/watch?v=awce_j2myQw" target="_blank" rel="noopener" data-yt="awce_j2myQw" aria-label="Play the video: Francis Ford Coppola on the notebook behind The Godfather"><img src="/media/coppola-notebook.jpg" width="688" height="522" alt="" loading="lazy"><span class="ytp"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></span><span class="ytc"><span class="caps">Francis Ford Coppola</span><b>The notebook behind <i>The Godfather</i></b></span></a>
+<p class="ytn">Not affiliated with this app.</p>
+<p class="links"><a href="https://www.amazon.com/dp/B01MRRWX5J" target="_blank" rel="noopener">Buy Francis Ford Coppola’s Godfather Notebook</a></p>
 </div>
 </div></section>
 
@@ -215,6 +226,8 @@ footer a{font-weight:700;color:#fff;text-decoration:none}footer .w.pv{display:bl
 </ul></div><div class="w cr">© 2026 Lanrito Films. All Rights Reserved.</div></footer>
 <dialog class="zoom" id="zoom" aria-label="Enlarged picture"><div class="zh"><b id="zt"></b><button class="zc" type="button" id="zc">Close</button></div><img id="zi" alt=""></dialog>
 <script>(()=>{
+/* the video in Who made it: nothing is asked of YouTube until someone presses play; then its player loads in the box. Without scripts the box is a plain link to the video */
+const yt=document.getElementById('yt');if(yt)yt.addEventListener('click',e=>{if(yt.classList.contains('on'))return;e.preventDefault();const f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'+yt.dataset.yt+'?autoplay=1&rel=0';f.title='Francis Ford Coppola on the notebook behind The Godfather';f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';f.allowFullscreen=true;f.referrerPolicy='strict-origin-when-cross-origin';yt.textContent='';yt.appendChild(f);yt.classList.add('on');yt.removeAttribute('href');yt.removeAttribute('target');});
 const v=document.getElementById('film'),b=document.getElementById('pp'),bar=document.getElementById('bar'),fs=document.getElementById('fs');
 if(v&&b){const t=()=>{b.textContent=v.paused?'Play':'Pause';};b.onclick=()=>{v.paused?v.play():v.pause();};v.addEventListener('play',t);v.addEventListener('pause',t);
  v.addEventListener('timeupdate',()=>{if(v.duration)bar.style.width=(v.currentTime/v.duration*100)+'%';});
