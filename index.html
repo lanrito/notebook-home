@@ -24,10 +24,10 @@ h1,h2,h3,p,figure{margin:0}h1,h2,h3{font-weight:800}
 .head{display:flex;flex-wrap:wrap;align-items:flex-end;gap:32px 56px;padding:84px 0 56px}
 .head h1{flex:999 1 600px;min-width:0;font-size:clamp(54px,10.6vw,152px);line-height:.9;letter-spacing:-.055em;color:#fff}
 .head .side{flex:1 1 340px;min-width:0;padding-bottom:10px}
-.head .sub{font-size:21px;line-height:1.4;color:rgba(252,247,233,.9)}
+.head .sub{font-size:21px;line-height:1.4;color:rgba(252,247,233,.9);text-wrap:balance}
 .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
 .fine{margin-top:16px;font-size:13px;letter-spacing:.04em;color:var(--dk)}.fine a{text-decoration:none;border-bottom:1px solid rgba(252,247,233,.3)}
-.lv{margin:22px 0 0;padding-top:16px;border-top:1px solid rgba(252,247,233,.2);display:grid;gap:7px;font-size:13.5px;line-height:1.45;color:var(--dk)}.lv div{display:grid;grid-template-columns:112px minmax(0,1fr);gap:14px}.lv dt{font-weight:700;color:rgba(252,247,233,.92)}.lv dd{margin:0}
+.lv{margin:22px 0 0;padding-top:16px;border-top:1px solid rgba(252,247,233,.2);display:grid;gap:7px;font-size:13.5px;line-height:1.45;color:var(--dk)}.lv div{display:grid;grid-template-columns:112px minmax(0,1fr);gap:14px}.lv dt{font-weight:700;color:rgba(252,247,233,.92)}.lv dd{margin:0;text-wrap:pretty}
 .sbar{position:fixed;left:0;right:0;top:0;z-index:20;background:rgba(0,0,0,.95);border-bottom:1px solid rgba(252,247,233,.16);color:var(--cream);transform:translateY(-100%);visibility:hidden;transition:transform .22s ease,visibility 0s .22s}
 .sbar.on{transform:none;visibility:visible;transition:transform .22s ease}
 .sbar .w{display:flex;align-items:center;gap:8px 24px;min-height:54px}
@@ -113,12 +113,11 @@ footer a{font-weight:700;color:#fff;text-decoration:none}footer .w.pv{display:bl
 <nav class="top" aria-label="Main"><a class="brand" href="#top"><img src="/img/logo.png" width="512" height="512" alt="">The Director’s Notebook</a><a class="l opt" href="#modes">Prep · Scout · Set</a><a class="l" href="#maker">Who made it</a><a class="l" href="https://app.thedirectorsnotebook.com/guide/">The Guide</a><a class="l" href="#contact">Contact</a><a class="btn s" href="https://app.thedirectorsnotebook.com/">Open the app</a></nav>
 <div class="head">
 <h1>The Director’s<br>Notebook</h1>
-<div class="side"><p class="sub">A scene’s breakdown, strategy, floor plan and shot list in one place.</p>
+<div class="side"><p class="sub">A scene’s breakdown, strategy, floor plan and shot list in one&nbsp;place.</p>
 <div class="cta"><a class="btn" href="https://app.thedirectorsnotebook.com/">Open the app</a><a class="btn o" href="https://app.thedirectorsnotebook.com/guide/">Read the guide</a></div>
-<p class="fine">Free · In beta · No sign-in needed to start</p>
-<p class="fine" style="margin-top:6px">For Mac, PC, iPad and Android tablets</p>
-<p class="fine" style="margin-top:6px"><a href="https://app.thedirectorsnotebook.com/guide/#c12-what-s-new">Updated November 2026 · What’s new</a></p>
-<dl class="lv"><div><dt>No account</dt><dd>One scene and one location scout, on this device.</dd></div><div><dt>Free account</dt><dd>As many as you need, on this device.</dd></div><div><dt>Invited to sync</dt><dd>The same account carries your work between your devices.</dd></div></dl></div>
+<p class="fine">Free · In beta</p>
+<p class="fine" style="margin-top:6px">Mac, PC, iPad and Android&nbsp;tablets</p>
+<dl class="lv"><div><dt>No account</dt><dd>Make one scene, on this device.</dd></div><div><dt>Free account</dt><dd>Make as many scenes as you need. They all stay on this device.</dd></div><div><dt>Sync account</dt><dd>By invitation only. Make as many scenes as you need, and your work syncs across your devices.</dd></div></dl></div>
 </div>
 <div class="caprow caps"><span>The app in motion</span><span>45 seconds · Silent</span></div>
 <div class="film"><video id="film" autoplay muted loop playsinline preload="metadata" poster="/media/film-poster.jpg" width="1920" height="1080" aria-label="A short silent film of the app: a character’s walk is drawn on the floor plan, a camera is added, the scene plays, and the shot list shows the shots."><source src="/media/film.mp4" type="video/mp4"></video></div>
