@@ -7,7 +7,7 @@
 <style>
 @font-face{font-family:Inter;font-style:normal;font-weight:100 900;font-display:swap;src:url(/fonts/inter-latin-wght-normal.woff2) format("woff2")}
 :root{--ink:#1c1c1e;--cream:#fcf7e9;--paper:#fbfaf7;--line:#d6d2c6;--dk:rgba(252,247,233,.66);--rule:rgba(252,247,233,.3)}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:24px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:76px}
 body{margin:0;background:#000;color:var(--ink);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
 a{color:inherit}a:hover{opacity:.78}img,video{display:block;max-width:100%;height:auto}
 h1,h2,h3,p,figure{margin:0}h1,h2,h3{font-weight:800}
@@ -28,8 +28,24 @@ h1,h2,h3,p,figure{margin:0}h1,h2,h3{font-weight:800}
 .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
 .fine{margin-top:16px;font-size:13px;letter-spacing:.04em;color:var(--dk)}.fine a{text-decoration:none;border-bottom:1px solid rgba(252,247,233,.3)}
 .lv{margin:22px 0 0;padding-top:16px;border-top:1px solid rgba(252,247,233,.2);display:grid;gap:7px;font-size:13.5px;line-height:1.45;color:var(--dk)}.lv div{display:grid;grid-template-columns:112px minmax(0,1fr);gap:14px}.lv dt{font-weight:700;color:rgba(252,247,233,.92)}.lv dd{margin:0}
+.sbar{position:fixed;left:0;right:0;top:0;z-index:20;background:rgba(0,0,0,.95);border-bottom:1px solid rgba(252,247,233,.16);color:var(--cream);transform:translateY(-100%);visibility:hidden;transition:transform .22s ease,visibility 0s .22s}
+.sbar.on{transform:none;visibility:visible;transition:transform .22s ease}
+.sbar .w{display:flex;align-items:center;gap:8px 24px;min-height:54px}
+.sbar .brand{font-size:15px;white-space:nowrap}.sbar .brand img{width:24px;height:24px}.sbar .btn.s{white-space:nowrap}
+@media (max-width:420px){.sbar .w{gap:8px 10px}.sbar .brand{font-size:14px;gap:7px}.sbar .brand img{width:22px;height:22px}.sbar .btn.s{font-size:13px;padding:8px 11px}}@media (max-width:380px){.sbar .brand{font-size:13px}.sbar .brand img{display:none}.sbar .btn.s{font-size:12.5px;padding:7px 10px}}
+.sbar a.l{text-decoration:none;font-size:13.5px;font-weight:600;padding:10px 0}.sbar .btn.s{font-size:13.5px;padding:8px 14px}
+@media (max-width:980px){.sbar a.l.opt{display:none}}@media (max-width:700px){.sbar a.l{display:none}}
+@media (prefers-reduced-motion:reduce){.sbar,.sbar.on{transition:none}}
+.f5l{margin-top:18px;font-size:14.5px;font-weight:600}.f5l a{text-decoration:none;border-bottom:1px solid rgba(252,247,233,.45);padding-bottom:2px}
+.f5h{margin-top:14px;font-size:clamp(38px,5vw,68px);line-height:1;letter-spacing:-.04em}
+.f5{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr) minmax(0,1.1fr);gap:28px;margin-top:44px;align-items:start}
+.f5c{border-top:1.5px solid var(--ink);padding-top:16px}.f5n{font:700 11.5px/1 Inter,system-ui,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#5c5c62}
+.f5q{margin-top:18px;font-size:27px;line-height:1.22;letter-spacing:-.02em;font-weight:700}.f5c img{display:block;width:100%;height:auto;margin-top:18px;border:1px solid var(--line);border-radius:8px;background:#fff}
+.f5r{margin-top:18px;border:1px solid var(--line);border-radius:8px;background:#fff;padding:18px 20px}.f5k{display:flex;align-items:center;gap:10px;font-size:26px;font-weight:800;letter-spacing:-.02em}.f5k i{width:14px;height:14px;border-radius:3px;background:#c2405a;display:block}.f5t{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}.f5t b{font-size:12.5px;font-weight:600;border:1px solid var(--line);border-radius:999px;padding:4px 10px}.f5r p{margin-top:14px;font-size:17px;line-height:1.45}
+.f5s{margin-top:12px;font-size:15px;color:#3a3a3e}.f5f{margin-top:36px;font-size:17px}.f5f a{font-weight:700}
+@media (max-width:900px){.f5{grid-template-columns:1fr}.f5c img{max-width:560px}}
 .caprow{display:flex;justify-content:space-between;gap:16px;padding-bottom:12px}
-.film{position:relative;border-radius:10px;overflow:hidden;border:1px solid rgba(252,247,233,.22);background:#fff}.film video{width:100%}
+.film{position:relative;border-radius:10px;overflow:hidden;border:1px solid rgba(252,247,233,.22);background:#0c0c0d}.film video{width:100%}
 .ctl{display:flex;align-items:center;gap:18px;margin-top:6px}
 .vp{font:700 11.5px/1 Inter,system-ui,sans-serif;letter-spacing:.22em;text-transform:uppercase;min-height:44px;min-width:64px;padding:0;border:0;background:none;color:var(--cream);cursor:pointer;text-align:right}
 .ctl .vp+.vp{min-width:0}
@@ -45,7 +61,7 @@ h1,h2,h3,p,figure{margin:0}h1,h2,h3{font-weight:800}
 .sample .sa{flex:1 1 320px;min-width:0}.sample h3{margin-top:12px;font-size:clamp(30px,3.6vw,46px);line-height:1.02;letter-spacing:-.035em}
 .sample .sa p{margin-top:16px;color:#3a3a3e;max-width:460px}.sample .sd{margin-top:26px}.sample .sm{margin-top:14px;font-size:13px;letter-spacing:.04em;color:#5c5c62}
 .sample .sp{flex:2 1 520px;min-width:0;display:grid;grid-template-columns:1fr 1fr;gap:22px 20px}
-.pg img{width:100%;border-radius:6px;border:1px solid var(--line);background:#fff;box-shadow:0 10px 28px rgba(0,0,0,.07)}.pg .caps{display:block;margin-top:10px;color:#5c5c62}
+.pg img{width:100%;border-radius:6px;border:1px solid var(--line);background:#fff;box-shadow:0 10px 28px rgba(0,0,0,.07)}.pg .caps{display:block;margin-top:10px;color:#5c5c62}.pg{min-width:0}.pgc{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 10px;margin-top:10px}.pg .pgc .caps{margin-top:0}.pg:hover .en,.pg:focus-visible .en{color:var(--ink)}
 .zoom{width:min(1500px,96vw);max-width:none;max-height:94vh;padding:12px 14px 14px;border:1px solid rgba(252,247,233,.24);border-radius:12px;background:#000;color:var(--cream)}
 .zoom::backdrop{background:rgba(0,0,0,.82)}
 .zoom .zh{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:0 2px 8px}.zoom b{font-size:18px;letter-spacing:-.02em;color:#fff}
@@ -81,7 +97,7 @@ tbody tr{border-top:1px solid #e4e0d5}td:first-child{font-weight:800;white-space
 .contact .a{flex:1 1 400px;min-width:0}.contact .b{flex:1 1 420px;min-width:0}
 .contact h2{margin-top:12px;font-size:clamp(34px,4.6vw,58px);line-height:1;letter-spacing:-.04em;color:#fff}
 .contact .write{margin-top:22px;font-size:21px;line-height:1.4;color:rgba(252,247,233,.9)}.contact .write a{color:#fff;font-weight:700}
-.route{display:block;text-decoration:none;border-top:1px solid var(--rule);padding:18px 0}.route:last-child{border-bottom:1px solid var(--rule)}
+.route{display:block;position:relative;text-decoration:none;border-top:1px solid var(--rule);padding:18px 48px 18px 0}.route::after{content:"→";position:absolute;right:2px;top:50%;transform:translateY(-50%);font-size:22px;line-height:1;color:var(--cream);opacity:.7;transition:transform .15s ease,opacity .15s ease}.route:hover::after,.route:focus-visible::after{transform:translate(4px,-50%);opacity:1}.route:hover b{text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:4px}.route:last-child{border-bottom:1px solid var(--rule)}
 .route b{display:block;font-size:20px;letter-spacing:-.02em;color:#fff}.route span{display:block;margin-top:2px;color:rgba(252,247,233,.8);font-size:16px}
 footer{border-top:1px solid rgba(252,247,233,.18);padding:26px 0 44px;color:rgba(252,247,233,.72);font-size:14px}footer .w{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px 24px}
 footer a{font-weight:700;color:#fff;text-decoration:none}footer .w.pv{display:block;margin-top:24px;padding-top:22px;border-top:1px solid rgba(252,247,233,.12);font-size:13.5px;line-height:1.6;scroll-margin-top:24px}footer .pv ul{margin:10px 0 0;padding-left:18px;max-width:760px}footer .pv li{margin:4px 0}footer .pv .pd{margin:10px 0 0;color:rgba(252,247,233,.5);font-size:12.5px}footer .w.cr{display:block;margin-top:16px;font-size:12.5px;letter-spacing:.02em;color:rgba(252,247,233,.5)}
@@ -91,6 +107,7 @@ footer a{font-weight:700;color:#fff;text-decoration:none}footer .w.pv{display:bl
 @media (max-width:700px){.top a.l{display:none}}
 @media (max-width:420px){.brand{font-size:14.5px;gap:7px}.brand img{width:24px;height:24px}.btn.s{padding:9px 11px;font-size:13.5px}.top{gap:8px 8px}}
 </style></head><body>
+<nav class="sbar" id="sbar" aria-label="Quick links"><div class="w"><a class="brand" href="#top"><img src="/img/logo.png" width="512" height="512" alt="">The Director’s Notebook</a><a class="l opt" href="#modes">Prep · Scout · Set</a><a class="l" href="#maker">Who made it</a><a class="l" href="https://app.thedirectorsnotebook.com/guide/">The Guide</a><a class="l" href="#contact">Contact</a><a class="btn s" href="https://app.thedirectorsnotebook.com/">Open the app</a></div></nav>
 
 <header class="dark hero" id="top"><div class="w">
 <nav class="top" aria-label="Main"><a class="brand" href="#top"><img src="/img/logo.png" width="512" height="512" alt="">The Director’s Notebook</a><a class="l opt" href="#modes">Prep · Scout · Set</a><a class="l" href="#maker">Who made it</a><a class="l" href="https://app.thedirectorsnotebook.com/guide/">The Guide</a><a class="l" href="#contact">Contact</a><a class="btn s" href="https://app.thedirectorsnotebook.com/">Open the app</a></nav>
@@ -106,7 +123,19 @@ footer a{font-weight:700;color:#fff;text-decoration:none}footer .w.pv{display:bl
 <div class="caprow caps"><span>The app in motion</span><span>45 seconds · Silent</span></div>
 <div class="film"><video id="film" autoplay muted loop playsinline preload="metadata" poster="/media/film-poster.jpg" width="1920" height="1080" aria-label="A short silent film of the app: a character’s walk is drawn on the floor plan, a camera is added, the scene plays, and the shot list shows the shots."><source src="/media/film.mp4" type="video/mp4"></video></div>
 <div class="ctl"><div class="prog" aria-hidden="true"><i id="bar"></i></div><button class="vp" id="pp" type="button">Pause</button><button class="vp" id="fs" type="button" hidden>Fullscreen</button></div>
+<p class="f5l"><a href="#shot5a">Follow shot 5A, from the idea to the shot list&nbsp;&nbsp;↓</a></p>
 </div></header>
+
+<section class="light band" id="shot5a"><div class="w">
+<div class="caps">One shot, start to finish</div>
+<h2 class="f5h">Follow shot 5A.</h2>
+<div class="f5">
+<div class="f5c"><div class="f5n">1 · The idea</div><p class="f5q">“Go tight once the portfolio is on the desk.”</p><p class="f5s">From the scene’s Shooting Strategy.</p></div>
+<div class="f5c"><div class="f5n">2 · The camera</div><img src="/media/sample/5a-plan.jpg" width="1200" height="820" alt="The floor plan around the desk in the sample scene, with camera 5A placed beside it and circled." loading="lazy"><p class="f5s">Camera 5A goes on the floor plan, beside the desk.</p></div>
+<div class="f5c"><div class="f5n">3 · The shot</div><div class="f5r"><div class="f5k"><i></i>5A</div><div class="f5t"><b>Close-up</b><b>Insert</b><b>High Angle</b><b>Stationary</b></div><p>The portfolio lands on the desk. Her hand stays on it a beat too long.</p></div><p class="f5s">It is already on the shot list, with its size, type and angle. The same line is in Set mode and in the PDF.</p></div>
+</div>
+<p class="f5f">Place the camera once. The shot list, Set mode and the PDF follow. <a href="#sample">See the four-page sample</a></p>
+</div></section>
 
 <section class="light band" id="modes"><div class="w">
 <div class="caps">From the first read to the day you shoot</div>
@@ -135,7 +164,7 @@ footer a{font-weight:700;color:#fff;text-decoration:none}footer .w.pv{display:bl
 <p>Scene 1 of “The Long Way Home”, the invented project in these pictures, as Export PDF makes it: the breakdown, the shooting strategy, the floor plan and the shot list.</p>
 <p class="sd"><a class="btn k" href="/media/The-Long-Way-Home-Sample.pdf" download>Download the sample</a></p>
 <p class="sm">PDF · 4 pages · 0.7 MB · Nothing retouched</p></div>
-<div class="sp"><button class="zb pg" type="button" data-zoom="/media/sample/breakdown.jpg" data-t="Scene Breakdown" aria-label="Enlarge the Scene Breakdown page"><img src="/media/sample/breakdown-s.jpg" width="880" height="680" alt="The exported Scene Breakdown page: six columns from Synopsis to Pitfalls, filled in for Scene 1." loading="lazy"><span class="caps">Scene Breakdown</span></button><button class="zb pg" type="button" data-zoom="/media/sample/strategy.jpg" data-t="Shooting Strategy" aria-label="Enlarge the Shooting Strategy page"><img src="/media/sample/strategy-s.jpg" width="880" height="680" alt="The exported Shooting Strategy page: power dynamics, camera strategy, key visuals, blocking rationale and the arc of the scene." loading="lazy"><span class="caps">Shooting Strategy</span></button><button class="zb pg" type="button" data-zoom="/media/sample/floor-plan.jpg" data-t="Floor Plan" aria-label="Enlarge the Floor Plan page"><img src="/media/sample/floor-plan-s.jpg" width="880" height="680" alt="The exported Floor Plan page: a studio from above with Maya’s four positions, Dev at the desk and seven cameras, each labeled with its shot." loading="lazy"><span class="caps">Floor Plan</span></button><button class="zb pg" type="button" data-zoom="/media/sample/shot-list.jpg" data-t="Shot List" aria-label="Enlarge the Shot List page"><img src="/media/sample/shot-list-s.jpg" width="880" height="680" alt="The exported Shot List page: seven shots from 1A to 6A with size, type, movement and a description." loading="lazy"><span class="caps">Shot List</span></button></div>
+<div class="sp"><button class="zb pg" type="button" data-zoom="/media/sample/breakdown.jpg" data-t="Scene Breakdown" aria-label="Enlarge the Scene Breakdown page"><img src="/media/sample/breakdown-s.jpg" width="880" height="680" alt="The exported Scene Breakdown page: six columns from Synopsis to Pitfalls, filled in for Scene 1." loading="lazy"><span class="pgc"><span class="caps">Scene Breakdown</span><span class="caps en">Enlarge</span></span></button><button class="zb pg" type="button" data-zoom="/media/sample/strategy.jpg" data-t="Shooting Strategy" aria-label="Enlarge the Shooting Strategy page"><img src="/media/sample/strategy-s.jpg" width="880" height="680" alt="The exported Shooting Strategy page: power dynamics, camera strategy, key visuals, blocking rationale and the arc of the scene." loading="lazy"><span class="pgc"><span class="caps">Shooting Strategy</span><span class="caps en">Enlarge</span></span></button><button class="zb pg" type="button" data-zoom="/media/sample/floor-plan.jpg" data-t="Floor Plan" aria-label="Enlarge the Floor Plan page"><img src="/media/sample/floor-plan-s.jpg" width="880" height="680" alt="The exported Floor Plan page: a studio from above with Maya’s four positions, Dev at the desk and seven cameras, each labeled with its shot." loading="lazy"><span class="pgc"><span class="caps">Floor Plan</span><span class="caps en">Enlarge</span></span></button><button class="zb pg" type="button" data-zoom="/media/sample/shot-list.jpg" data-t="Shot List" aria-label="Enlarge the Shot List page"><img src="/media/sample/shot-list-s.jpg" width="880" height="680" alt="The exported Shot List page: seven shots from 1A to 6A with size, type, movement and a description." loading="lazy"><span class="pgc"><span class="caps">Shot List</span><span class="caps en">Enlarge</span></span></button></div>
 </div>
 </div></section>
 
@@ -207,6 +236,9 @@ if(d&&d.showModal){let from=null;
  document.getElementById('zc').onclick=()=>d.close();
  d.addEventListener('click',e=>{if(e.target===d)d.close();});
  d.addEventListener('close',()=>{zi.removeAttribute('src');if(from&&from.focus)from.focus({preventScroll:true});});
-}else document.querySelectorAll('.zt').forEach(x=>x.hidden=true);
+}else document.querySelectorAll('.zt,.en').forEach(x=>x.hidden=true);
+/* the slim bar: shown once the page's own top bar has scrolled away */
+const sb=document.getElementById('sbar'),tp=document.querySelector('.top');
+if(sb&&tp&&'IntersectionObserver' in window)new IntersectionObserver(e=>{sb.classList.toggle('on',!e[0].isIntersecting);}).observe(tp);
 })();</script>
 </body></html>
